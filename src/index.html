@@ -3,11 +3,116 @@
 <head>
     <meta charset="utf-8">
     <title>Martin Schön</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 </head>
 <body>
-    <div class="important">
-        <p>This is an important message.</p>
-        <p class="red">This one is heavily more important.</p>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <div class="media">
+                    <img src="<%= require('./assets/profile.jpg') %>" 
+                        class="align-self-center profile-pic">
+                    <div class="media-body">
+                        <h1 class="display-4">Martin Schön</h1>
+                        <p class="lead">Journalist und Webentwickler</p>
+                        <p class="social-icons">
+                            <img src="<%= require('./assets/github.png') %>">
+                            <img src="<%= require('./assets/github.png') %>">
+                            <img src="<%= require('./assets/github.png') %>">
+                            <img src="<%= require('./assets/github.png') %>">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row card-row">
+            <div class="col-sm-6 col-lg-4">
+                <div class="card" style="width: 100%;">
+                    <img class="card-img-top" src="<%= require('./assets/screen.png') %>" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Driverless Cockpit</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="card" style="width: 100%;">
+                    <img class="card-img-top" src="<%= require('./assets/screen.png') %>" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Digitales Erzählen</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="card" style="width: 100%;">
+                    <img class="card-img-top" src="<%= require('./assets/screen.png') %>" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">SZ für Kinder</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="card" style="width: 100%;">
+                    <img class="card-img-top" src="<%= require('./assets/screen.png') %>" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="card" style="width: 100%;">
+                    <img class="card-img-top" src="<%= require('./assets/screen.png') %>" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="card" style="width: 100%;">
+                    <img class="card-img-top" src="<%= require('./assets/screen.png') %>" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid jumbotron-footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-sm-6 offset-sm-3 col-lg-4 offset-lg-4 text-center">
+                    <!-- Imprint -->
+                    <div class="media">
+                        <div class="media-body">
+                            <h4>Martin Schön</h4>
+                            <p><a href="mailto:martingeorg.schoen@gmail.com">martingeorg.schoen@gmail.com</a></p>
+                            <p>Esswurmstra&szlig;e 25, 81371 M&uuml;nchen</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Source code -->
+                    <div class="media source-code mt-4">
+                        <div class="media-body">
+                            <p>
+                                <img src="<%= require('./assets/github.png') %>" class="social-icon">
+                                <a href="https://github.com/mgschoen/portfolio">Source code for this page</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

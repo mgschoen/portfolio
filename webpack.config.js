@@ -6,21 +6,32 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
+
+    // General settings
     mode: 'production',
     entry: './src/index.js',
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist')
     },
-    devtool: 'source-map',
+    performance: {
+        hints: false
+    },
+
+    // Dev environment
     devServer: {
         contentBase: './dist'
     },
+
+    // Minification and source maps
+    devtool: 'source-map',
     optimization: {
         minimizer: [
             new OptimizeCSSAssetsPlugin({})
         ]
     },
+
+    // Plugins
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
@@ -34,21 +45,32 @@ module.exports = {
             chunkFilename: '[id].[hash].css'
         })
     ],
+
     module: {
-        rules: [{
-            test: /\.css$/,
-            use: [ 
-                MiniCssExtractPlugin.loader, 
-                'css-loader' 
-            ]
-        },
-        {
-            test: /\.scss$/,
-            use: [ 
-                MiniCssExtractPlugin.loader, 
-                'css-loader',
-                'sass-loader' 
-            ]
-        }]
+        rules: [
+
+            // CSS/SCSS processing
+            {
+                test: /\.css$/,
+                use: [ 
+                    MiniCssExtractPlugin.loader, 
+                    'css-loader' 
+                ]
+            },
+            {
+                test: /\.scss$/,
+                use: [ 
+                    MiniCssExtractPlugin.loader, 
+                    'css-loader',
+                    'sass-loader' 
+                ]
+            },
+
+            // Image processing
+            {
+                test: /\.(jpg|jpeg|png)$/,
+                loader: 'file-loader'
+            }
+        ]
     }
 }
