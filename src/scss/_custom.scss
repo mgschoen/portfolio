@@ -19,8 +19,15 @@ div.row.portfolio-header {
 .jumbotron-footer {
     
     margin-bottom: 0;
+    background: $color-darkgrey;
+    color: $color-grey;
+    font-weight: 200;
 
-    & p {
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 300;
+    }
+
+    p {
         margin-bottom: 0;
     }
 }
@@ -41,8 +48,23 @@ div.row.portfolio-header {
     }
 }
 
-.social-icon {
-    max-width: 32px;
+.social-icons {
+
+    a {
+
+        &:hover {
+            text-decoration: none;
+            opacity: .7;
+
+            .social-icon {
+                color: $color-red;
+            }
+        }
+
+        .social-icon {
+            max-width: 32px;
+        }
+    }
 }
 
 .btn {

@@ -1,5 +1,3 @@
-$color-lightgrey: #e9ecef;
-
 .row.timeline-row {
 
     /* -------------------------------- 
@@ -127,11 +125,11 @@ $color-lightgrey: #e9ecef;
     }
 
     .cd-timeline__img.cd-timeline__img--education {
-        background: #75ce66;
+        background: $color-green;
     }
 
     .cd-timeline__img.cd-timeline__img--work {
-        background: #007bff;
+        background: $color-red;
     }
 
     .cd-timeline__img.cd-timeline__img--other {
@@ -139,6 +137,7 @@ $color-lightgrey: #e9ecef;
     }
 
     .cd-timeline__img.cd-timeline__img--other2 {
+        background: #007bff;
         background: #c03b44;
     }
 
@@ -168,7 +167,6 @@ $color-lightgrey: #e9ecef;
     .cd-timeline__content {
         position: relative;
         margin-left: 60px;
-        /*border: 1px solid $color-lightgrey;*/
         border-radius: 0.25em;
         background: $color-lightgrey;
         padding: 1em;

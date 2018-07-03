@@ -1,3 +1,12 @@
+$color-green: rgb(45,136,45);
+$color-red: rgb(200,79,99);
+$color-grey: rgb(206,206,206);
+$color-darkgrey: rgb(43,43,43);
+$color-lightgrey: #e9ecef;
+
+$body-color: $color-darkgrey;
+$primary: $color-green;
+
 @import '~bootstrap/scss/bootstrap.scss';
 @import './_timeline.scss';
 @import './_custom.scss';
