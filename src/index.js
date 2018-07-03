@@ -1,5 +1,5 @@
 // Import styles
-require('./css/main.scss')
+require('./scss/main.scss')
 
 // Import additional scripts
 require('./js/custom')

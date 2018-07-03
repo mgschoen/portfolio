@@ -1,0 +1,59 @@
+div.row.portfolio-header {
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    margin-bottom: 20px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.card-row {
+
+    &.portfolio-card-row .btn {
+        margin: 0 10px 10px 0;
+    }
+
+    & .card {
+        margin-bottom: 20px;
+    }
+}
+
+.jumbotron-footer {
+    
+    margin-bottom: 0;
+
+    & p {
+        margin-bottom: 0;
+    }
+}
+
+.profile-pic {
+    border: 2px solid white;
+    border-radius: 50%;
+    margin: 0 20px;
+    max-width: 150px;
+}
+
+.source-code {
+
+    font-size: 14px;
+
+    & .social-icon {
+        width: 20px;
+    }
+}
+
+.social-icon {
+    max-width: 32px;
+}
+
+.btn {
+    & img {
+        max-width: 20px;
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .media.profile {
+        display: block;
+        text-align: center;
+    }
+}

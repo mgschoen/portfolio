@@ -2,92 +2,248 @@
 <html lang="de">
 <head>
     <meta charset="utf-8">
-    <title>Martin Schön</title>
+    <title>Martin Schön | Journalist und Webentwickler</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 </head>
 <body>
     <div class="container">
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <div class="media">
+                <div class="media profile">
                     <img src="<%= require('./assets/profile.jpg') %>" 
                         class="align-self-center profile-pic">
                     <div class="media-body">
                         <h1 class="display-4">Martin Schön</h1>
                         <p class="lead">Journalist und Webentwickler</p>
                         <p class="social-icons">
-                            <img src="<%= require('./assets/github.png') %>">
-                            <img src="<%= require('./assets/github.png') %>">
-                            <img src="<%= require('./assets/github.png') %>">
-                            <img src="<%= require('./assets/github.png') %>">
+                            <a target="_blank" href="https://www.facebook.com/martti.kaunis">
+                                <img src="<%= require('./assets/logo-facebook.svg') %>" class="social-icon">
+                            </a>
+                            <a target="_blank" href="https://twitter.com/mgschoen">
+                                <img src="<%= require('./assets/logo-twitter.svg') %>" class="social-icon">
+                            </a>
+                            <a target="_blank" href="https://github.com/mgschoen">
+                                <img src="<%= require('./assets/logo-github.svg') %>" class="social-icon">
+                            </a>
+                            <a target="_blank" href="mailto:martingeorg.schoen@gmail.com">
+                                <img src="<%= require('./assets/md-mail.svg') %>" class="social-icon">
+                            </a>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row card-row">
+
+        <div class="row portfolio-header">
+            <div class="col-12">
+                <h2>Projekte</h2>
+            </div>
+        </div>
+
+        <div class="row card-row portfolio-card-row">
+            <!-- Driverless Cockpit -->
             <div class="col-sm-6 col-lg-4">
                 <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="<%= require('./assets/screen.png') %>" alt="Card image cap">
+                    <img class="card-img-top" src="<%= require('./assets/driverless.png') %>" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Driverless Cockpit</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text">Was sieht ein selbstfahrendes Auto? Für <a target="_blank" href="https://www.munichmotorsport.de/" target="_blank">municHMotorsport</a> habe ich ein webbasiertes Monitoring-Tool entwickelt. Im Einsatz bei <a target="_blank" href="https://www.formulastudent.de/">Formula Student Germany</a> und <a target="_blank" href="https://www.formula-ata.it/" target="_blank">Formula Student Italy</a>.</p>
+                        <a target="_blank" href="https://github.com/mgschoen/driverless-cockpit-backend" class="btn btn-primary">Code auf Github</a>
                     </div>
                 </div>
             </div>
+            <!-- Kreml -->
             <div class="col-sm-6 col-lg-4">
                 <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="<%= require('./assets/screen.png') %>" alt="Card image cap">
+                    <img class="card-img-top" src="<%= require('./assets/kreml.png') %>" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Digitales Erzählen</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Der Kreml &ndash; Burg der Geheimnisse</h5>
+                        <p class="card-text">Der Palast im Herzen Moskaus gilt als Symbol für unbegrenzte Macht. Doch was verbirgt sich hinter den Mauern? Ein Blick in die Festung des russischen Präsidenten, aufbereitet für SZ.de.</p>
+                        <a target="_blank" href="https://projekte.sueddeutsche.de/artikel/gesellschaft/kreml-in-moskau-die-burg-der-geheimnisse-e210387/" class="btn btn-primary">Zur Reportage</a>
                     </div>
                 </div>
             </div>
+            <!-- Lieblingsgeschichten -->
             <div class="col-sm-6 col-lg-4">
                 <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="<%= require('./assets/screen.png') %>" alt="Card image cap">
+                    <img class="card-img-top" src="<%= require('./assets/lieblingsgeschichten.jpg') %>" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">SZ für Kinder</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Lieblings&shy;geschichten</h5>
+                        <p class="card-text">Warum arbeitet am Berliner Bahnhof ein Hund? Was ist ein Hamsterkauf? Und wie soll ich all die freien Tage nur rumkriegen? Eine verspielte digitale Ferienausgabe der SZ für Kinder.</p>
+                        <a target="_blank" href="https://www.sueddeutsche.de/lieblingsgeschichten" class="btn btn-primary">Zur Ausgabe</a>
+                        <a target="_blank" href="http://argonn.me/share/jule-kinderzeitung.pdf" class="btn btn-primary">Ich über das Heft</a>
                     </div>
                 </div>
             </div>
+            <!-- Medientechnik -->
             <div class="col-sm-6 col-lg-4">
                 <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="<%= require('./assets/screen.png') %>" alt="Card image cap">
+                    <img class="card-img-top" src="<%= require('./assets/medientechnik.png') %>" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Medientechnik Orga-App</h5>
+                        <p class="card-text">200 Studenten, 50 Gruppen, 15 Tutoren, vier Praktika und nur zwei Mitarbeiter - mit dieser Webapp behalten alle den Überblick und jeder bekommt seinen Wunschtermin. Entstanden am <a target="_blank" href="http://www.mimuc.de/" target="_blank">Lehrstuhl Medieninformatik der LMU</a> &ndash; und in vielen schlaflosen Nächten.</p>
+                        <a target="_blank" href="https://lmu-mt.herokuapp.com/" class="btn btn-primary">Zur Testversion</a>
+                        <a target="_blank" href="https://github.com/LMU-PWD/lmu-mt" class="btn btn-primary">Code auf Github</a>
                     </div>
                 </div>
             </div>
+            <!-- Nasty Fish -->
             <div class="col-sm-6 col-lg-4">
                 <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="<%= require('./assets/screen.png') %>" alt="Card image cap">
+                    <img class="card-img-top" src="<%= require('./assets/nasty.jpg') %>" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">iOS-App: Nasty Fish</h5>
+                        <p class="card-text">Niemals hätte <a target="_blank" href="https://de.wikipedia.org/wiki/Figuren_aus_Asterix#Verleihnix">Verleihnix</a> einen seiner stinkenden Fische ausgeborgt &ndash; es sei denn, er hätte diese App gehabt. Ein digitales Notizbuch für Tauschgeschäfte, das ganz ohne Internet funktioniert.</p>
+                        <a target="_blank" href="#" class="btn btn-primary">Code wo???</a>
                     </div>
                 </div>
             </div>
+            <!-- Peer Group Network -->
+            <div class="col-sm-6 col-lg-4">
+                    <div class="card" style="width: 100%;">
+                        <img class="card-img-top" src="<%= require('./assets/relations.png') %>" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Peer Group Network</h5>
+                            <p class="card-text">Ein Tool zur Klärung einer alten Frage: Wer hatte wann was mit wem? Über ein CMS können Nutzer Angaben zu Personen und Beziehungen machen, die dann in übersichtlichen Visualisierungen jede Affäre entlarven. Nein, mit meinen Freunden hat das nichts zu tun.</p>
+                            <a target="_blank" href="http://relations.argonn.me/" class="btn btn-primary">Zur Testversion</a>
+                            <a target="_blank" href="https://github.com/mgschoen/peer-group-network" class="btn btn-primary">Code auf Github</a>
+                        </div>
+                    </div>
+                </div>
+            <!-- Sudeten -->
             <div class="col-sm-6 col-lg-4">
                 <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="<%= require('./assets/screen.png') %>" alt="Card image cap">
+                    <img class="card-img-top" src="<%= require('./assets/sudeten.png') %>" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Heimat im Kopf</h5>
+                        <p class="card-text">70 Jahre nach der Vertreibung der Sudetendeutschen fragen wir: Wie gehen Vertriebene, Verbliebene und Tschechen heute mit dem Unrecht um? Ein Streifzug durch ein dunkles europäisches Kapitel, den ich technisch für SZ.de umsetzen durfte.</p>
+                        <a target="_blank" href="http://gfx.sueddeutsche.de/politik/sudetendeutsche/index.html" class="btn btn-primary">Zur Reportage</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Ernährungspyramide  -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card" style="width: 100%;">
+                    <img class="card-img-top" src="<%= require('./assets/ernaehrung.png') %>" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Wie viel wovon?</h5>
+                        <p class="card-text">Welche Menge Wasser braucht ein Kind am Tag? Und nach wie vielen Schokoriegeln ist Schluss? Eine interaktive Ernährungspyramide für Vier- bis Zwölfjährige, erschienen in der SZ für Kinder.</p>
+                        <a target="_blank" href="http://argonn.me/kindersz/ernaehrung/" class="btn btn-primary">Zur Grafik</a>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="row portfolio-header">
+            <div class="col-12">
+                <h2>Stationen</h2>
+            </div>
+        </div>
+    
+        <!-- Timeline -->
+        <div class="row timeline-row">
+            <div class="col-12">
+                <section class="cd-timeline js-cd-timeline">
+                    <div class="cd-timeline__container">
+
+                        <!-- Medieninformatik -->
+                        <div class="cd-timeline__block js-cd-block">
+                            <div class="cd-timeline__img cd-timeline__img--education js-cd-img">
+                                <img src="<%= require('./assets/ios-school-white.svg') %>" alt="Picture">
+                            </div>
+                    
+                            <div class="cd-timeline__content js-cd-content">
+                                <h4>B.Sc. Medieninformatik</h4>
+                                <p>Ludwig-Maximilians-Universität München</p>
+                                <span class="cd-timeline__date">WS 2014 - WS 2018</span>
+                            </div>
+                        </div>
+
+                        <!-- SZ -->
+                        <div class="cd-timeline__block js-cd-block">
+                            <div class="cd-timeline__img cd-timeline__img--work js-cd-img">
+                                <img src="<%= require('./assets/ios-build.svg') %>" alt="Picture">
+                            </div>
+                    
+                            <div class="cd-timeline__content js-cd-content">
+                                <h4>Süddeutsche Zeitung</h4>
+                                <p>Mitarbeiter in der Redaktion Digitale Ausgabe. Bis Februar 2016 freier Mitarbeiter, ab März 2016 Werkstudent</p>
+                                <span class="cd-timeline__date">September 2014 - Juli 2018</span>
+                            </div>
+                        </div>
+
+                        <!-- Journalistik -->
+                        <div class="cd-timeline__block js-cd-block">
+                            <div class="cd-timeline__img cd-timeline__img--education js-cd-img">
+                                <img src="<%= require('./assets/ios-school-white.svg') %>" alt="Picture">
+                            </div>
+                    
+                            <div class="cd-timeline__content js-cd-content">
+                                <h4>B.A. Journalistik</h4>
+                                <p>Katholische Universität Eichstätt-Ingolstadt</p>
+                                <span class="cd-timeline__date">Oktober 2011 - Juli 2014</span>
+                            </div>
+                        </div>
+
+                        <!-- SZ Magazin -->
+                        <div class="cd-timeline__block js-cd-block">
+                            <div class="cd-timeline__img cd-timeline__img--work js-cd-img">
+                                <img src="<%= require('./assets/ios-build.svg') %>" alt="Picture">
+                            </div>
+                    
+                            <div class="cd-timeline__content js-cd-content">
+                                <h4>Süddeutsche Zeitung Magazin</h4>
+                                <p>Praktikum</p>
+                                <span class="cd-timeline__date">Februar - April 2014</span>
+                            </div>
+                        </div>
+
+                        <!-- RadioWelt -->
+                        <div class="cd-timeline__block js-cd-block">
+                            <div class="cd-timeline__img cd-timeline__img--work js-cd-img">
+                                <img src="<%= require('./assets/ios-build.svg') %>" alt="Picture">
+                            </div>
+                    
+                            <div class="cd-timeline__content js-cd-content">
+                                <h4>Bayern 2 RadioWelt</h4>
+                                <p>Praktikum</p>
+                                <span class="cd-timeline__date">Januar 2014</span>
+                            </div>
+                        </div>
+
+                        <!-- Finnland -->
+                        <div class="cd-timeline__block js-cd-block">
+                            <div class="cd-timeline__img cd-timeline__img--education js-cd-img">
+                                <img src="<%= require('./assets/ios-school-white.svg') %>" alt="Picture">
+                            </div>
+                    
+                            <div class="cd-timeline__content js-cd-content">
+                                <h4>University of Oulu, Finnland</h4>
+                                <p>Auslandsstudium</p>
+                                <span class="cd-timeline__date">WS 2013</span>
+                            </div>
+                        </div>
+
+                        <!-- Sommernotizbuch -->
+                        <div class="cd-timeline__block js-cd-block">
+                            <div class="cd-timeline__img cd-timeline__img--work js-cd-img">
+                                <img src="<%= require('./assets/ios-build.svg') %>" alt="Picture">
+                            </div>
+                    
+                            <div class="cd-timeline__content js-cd-content">
+                                <h4>Bayerischer Rundfunk</h4>
+                                <p>Ausbildungsprogramm "Sommernotizbuch"</p>
+                                <span class="cd-timeline__date">Juli und August 2013</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        </div>
     </div>
+
+    <!-- Footer -->
     <div class="jumbotron jumbotron-fluid jumbotron-footer">
         <div class="container">
             <div class="row align-items-center">
@@ -96,7 +252,7 @@
                     <div class="media">
                         <div class="media-body">
                             <h4>Martin Schön</h4>
-                            <p><a href="mailto:martingeorg.schoen@gmail.com">martingeorg.schoen@gmail.com</a></p>
+                            <p><a target="_blank" href="mailto:martingeorg.schoen@gmail.com">martingeorg.schoen@gmail.com</a></p>
                             <p>Esswurmstra&szlig;e 25, 81371 M&uuml;nchen</p>
                         </div>
                     </div>
@@ -106,7 +262,7 @@
                         <div class="media-body">
                             <p>
                                 <img src="<%= require('./assets/github.png') %>" class="social-icon">
-                                <a href="https://github.com/mgschoen/portfolio">Source code for this page</a>
+                                <a target="_blank" href="https://github.com/mgschoen/portfolio">Source code for this page</a>
                             </p>
                         </div>
                     </div>

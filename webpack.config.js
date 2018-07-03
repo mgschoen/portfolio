@@ -68,7 +68,7 @@ module.exports = {
 
             // Image processing
             {
-                test: /\.(jpg|jpeg|png)$/,
+                test: /\.(svg|jpg|jpeg|png)$/,
                 loader: 'file-loader'
             }
         ]
