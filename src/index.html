@@ -4,6 +4,13 @@
     <meta charset="utf-8">
     <title>Martin Schön | Journalist und Webentwickler</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <meta property="og:url"                content="http://argonn.me/" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="Martin Schön | Journalist und Webentwickler" />
+    <meta property="og:description"        content="Hi, ich bin Martin. Ich arbeite für eine Zeitung und studiere Informatik. Hier zeige ich, was ich bisher so gemacht habe." />
+    <meta property="og:image"              content="http://www.argonn.me/<%= require('./assets/social.jpg') %>" />
+
 </head>
 <body>
     <div class="container">
@@ -44,10 +51,10 @@
             <!-- Driverless Cockpit -->
             <div class="col-sm-6 col-lg-4">
                 <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="<%= require('./assets/driverless.png') %>" alt="Card image cap">
+                    <img class="card-img-top" src="<%= require('./assets/driverless-s.jpg') %>" alt="Schematische Darstellung eines Rennautos von oben, außenrum bunte Punkte">
                     <div class="card-body">
                         <h5 class="card-title">Driverless Cockpit</h5>
-                        <p class="card-text">Was sieht ein selbstfahrendes Auto? Für <a target="_blank" href="https://www.munichmotorsport.de/" target="_blank">municHMotorsport</a> habe ich ein webbasiertes Monitoring-Tool entwickelt. Im Einsatz bei <a target="_blank" href="https://www.formulastudent.de/">Formula Student Germany</a> und <a target="_blank" href="https://www.formula-ata.it/" target="_blank">Formula Student Italy</a>.</p>
+                        <p class="card-text">Was sieht ein selbstfahrendes Auto? Und wie wird aus Kameradaten die Fahrstrecke eines Rennautos? Für <a target="_blank" href="https://www.munichmotorsport.de/" target="_blank">municHMotorsport</a> habe ich ein webbasiertes Monitoring-Tool entwickelt. Im Einsatz bei <a target="_blank" href="https://www.formulastudent.de/">Formula Student Germany</a> und <a target="_blank" href="https://www.formula-ata.it/" target="_blank">Formula Student Italy</a>.</p>
                         <a target="_blank" href="https://github.com/mgschoen/driverless-cockpit-backend" class="btn btn-primary">Code auf Github</a>
                     </div>
                 </div>
@@ -55,10 +62,10 @@
             <!-- Kreml -->
             <div class="col-sm-6 col-lg-4">
                 <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="<%= require('./assets/kreml.png') %>" alt="Card image cap">
+                    <img class="card-img-top" src="<%= require('./assets/russland-s.jpg') %>" alt="Screenshot des Artikels">
                     <div class="card-body">
                         <h5 class="card-title">Der Kreml &ndash; Burg der Geheimnisse</h5>
-                        <p class="card-text">Der Palast im Herzen Moskaus gilt als Symbol für unbegrenzte Macht. Doch was verbirgt sich hinter den Mauern? Ein Blick in die Festung des russischen Präsidenten, aufbereitet für SZ.de.</p>
+                        <p class="card-text">Der Palast im Herzen Moskaus gilt als Symbol für unbegrenzte Macht. Doch was verbirgt sich hinter den Mauern? Ein Blick in die Festung des russischen Präsidenten, dem ich für SZ.de ein digitales Design verpasst habe.</p>
                         <a target="_blank" href="https://projekte.sueddeutsche.de/artikel/gesellschaft/kreml-in-moskau-die-burg-der-geheimnisse-e210387/" class="btn btn-primary">Zur Reportage</a>
                     </div>
                 </div>
@@ -66,19 +73,19 @@
             <!-- Lieblingsgeschichten -->
             <div class="col-sm-6 col-lg-4">
                 <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="<%= require('./assets/lieblingsgeschichten.jpg') %>" alt="Card image cap">
+                    <img class="card-img-top" src="<%= require('./assets/lieblingsgeschichten-s.jpg') %>" alt="Titelseite der Ausgabe auf einem Tablet">
                     <div class="card-body">
-                        <h5 class="card-title">Lieblings&shy;geschichten</h5>
-                        <p class="card-text">Warum arbeitet am Berliner Bahnhof ein Hund? Was ist ein Hamsterkauf? Und wie soll ich all die freien Tage nur rumkriegen? Eine verspielte digitale Ferienausgabe der SZ für Kinder.</p>
+                        <h5 class="card-title">"Lieblings&shy;geschichten" aus der SZ für Kinder</h5>
+                        <p class="card-text">Warum arbeitet am Berliner Bahnhof ein Hund? Was ist ein Hamsterkauf? Und wie krieg ich nur die freien Tage rum? Zu den Sommerferien habe ich eine digitale Kinderausgabe konzeptioniert und umgesetzt &ndash; mit den besten Texten und viel Gelegenheit zum Rumklicken.</p>
                         <a target="_blank" href="https://www.sueddeutsche.de/lieblingsgeschichten" class="btn btn-primary">Zur Ausgabe</a>
-                        <a target="_blank" href="http://argonn.me/share/jule-kinderzeitung.pdf" class="btn btn-primary">Ich über das Heft</a>
+                        <a target="_blank" href="http://argonn.me/share/jule-kinderzeitung.pdf" class="btn btn-primary">Über das Heft</a>
                     </div>
                 </div>
             </div>
             <!-- Medientechnik -->
             <div class="col-sm-6 col-lg-4">
                 <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="<%= require('./assets/medientechnik.png') %>" alt="Card image cap">
+                    <img class="card-img-top" src="<%= require('./assets/medientechnik-s.jpg') %>" alt="Screenshot einer Web-Anwendung">
                     <div class="card-body">
                         <h5 class="card-title">Medientechnik Orga-App</h5>
                         <p class="card-text">200 Studenten, 50 Gruppen, 15 Tutoren, vier Praktika und nur zwei Mitarbeiter - mit dieser Webapp behalten alle den Überblick und jeder bekommt seinen Wunschtermin. Entstanden am <a target="_blank" href="http://www.mimuc.de/" target="_blank">Lehrstuhl Medieninformatik der LMU</a> &ndash; und in vielen schlaflosen Nächten.</p>
@@ -90,21 +97,21 @@
             <!-- Nasty Fish -->
             <div class="col-sm-6 col-lg-4">
                 <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="<%= require('./assets/nasty.jpg') %>" alt="Card image cap">
+                    <img class="card-img-top" src="<%= require('./assets/nastyfish-s.jpg') %>" alt="Zwei bunte Fische und ein Werbetext: nasty fisch. Share anything. Even stinky fish.">
                     <div class="card-body">
-                        <h5 class="card-title">iOS-App: Nasty Fish</h5>
-                        <p class="card-text">Niemals hätte <a target="_blank" href="https://de.wikipedia.org/wiki/Figuren_aus_Asterix#Verleihnix">Verleihnix</a> einen seiner stinkenden Fische ausgeborgt &ndash; es sei denn, er hätte diese App gehabt. Ein digitales Notizbuch für Tauschgeschäfte, das ganz ohne Internet funktioniert.</p>
-                        <a target="_blank" href="#" class="btn btn-primary">Code wo???</a>
+                        <h5 class="card-title">iOS-App "Nasty Fish"</h5>
+                        <p class="card-text">Niemals hätte <a target="_blank" href="https://de.wikipedia.org/wiki/Figuren_aus_Asterix#Verleihnix">Verleihnix</a> einen seiner stinkenden Fische ausgeborgt &ndash; es sei denn, er hätte diese App benutzt. Ein digitales Notizbuch für Tauschgeschäfte, das ganz ohne Internet funktioniert.</p>
+                        <a target="_blank" href="https://github.com/mgschoen/nasty-fish" class="btn btn-primary">Code auf Github</a>
                     </div>
                 </div>
             </div>
             <!-- Peer Group Network -->
             <div class="col-sm-6 col-lg-4">
                     <div class="card" style="width: 100%;">
-                        <img class="card-img-top" src="<%= require('./assets/relations.png') %>" alt="Card image cap">
+                        <img class="card-img-top" src="<%= require('./assets/relations-s.jpg') %>" alt="Ein Netzwerkgraph">
                         <div class="card-body">
                             <h5 class="card-title">Peer Group Network</h5>
-                            <p class="card-text">Ein Tool zur Klärung einer alten Frage: Wer hatte wann was mit wem? Über ein CMS können Nutzer Angaben zu Personen und Beziehungen machen, die dann in übersichtlichen Visualisierungen jede Affäre entlarven. Nein, mit meinen Freunden hat das nichts zu tun.</p>
+                            <p class="card-text">Ein Tool zur Klärung einer alten Frage: Wer hatte wann was mit wem? Über ein CMS können Nutzer Angaben zu Personen und Beziehungen machen, die dann in grafischer Form jede Affäre entlarven. Nein, mit meinen Freunden hat das nichts zu tun.</p>
                             <a target="_blank" href="http://relations.argonn.me/" class="btn btn-primary">Zur Testversion</a>
                             <a target="_blank" href="https://github.com/mgschoen/peer-group-network" class="btn btn-primary">Code auf Github</a>
                         </div>
@@ -113,10 +120,10 @@
             <!-- Sudeten -->
             <div class="col-sm-6 col-lg-4">
                 <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="<%= require('./assets/sudeten.png') %>" alt="Card image cap">
+                    <img class="card-img-top" src="<%= require('./assets/sudeten-s.jpg') %>" alt="Screenshot des Artikels">
                     <div class="card-body">
                         <h5 class="card-title">Heimat im Kopf</h5>
-                        <p class="card-text">70 Jahre nach der Vertreibung der Sudetendeutschen fragt diese Reportage: Wie gehen Vertriebene, Verbliebene und Tschechen heute mit dem Unrecht um? Ein Streifzug durch ein dunkles Kapitel der Nachkriegszeit, den ich technisch für SZ.de umsetzen durfte.</p>
+                        <p class="card-text">70 Jahre nach der Vertreibung der Sudetendeutschen fragt diese Reportage: Wie gehen Vertriebene, Verbliebene und Tschechen heute mit dem Unrecht um? Ein Streifzug durch ein dunkles Kapitel der Nachkriegszeit, den ich technisch für SZ.de umgesetzt habe.</p>
                         <a target="_blank" href="http://gfx.sueddeutsche.de/politik/sudetendeutsche/index.html" class="btn btn-primary">Zur Reportage</a>
                     </div>
                 </div>
@@ -124,11 +131,22 @@
             <!-- Ernährungspyramide  -->
             <div class="col-sm-6 col-lg-4">
                 <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="<%= require('./assets/ernaehrung.png') %>" alt="Card image cap">
+                    <img class="card-img-top" src="<%= require('./assets/ernaehrung-s.jpg') %>" alt="Eine Ernährungspyramide mit bunten Illustrationen">
                     <div class="card-body">
                         <h5 class="card-title">Wie viel wovon?</h5>
                         <p class="card-text">Welche Menge Wasser braucht ein Kind am Tag? Und nach wie vielen Schokoriegeln ist Schluss? Eine interaktive Ernährungspyramide für Vier- bis Zwölfjährige, erschienen in der SZ für Kinder.</p>
                         <a target="_blank" href="http://argonn.me/kindersz/ernaehrung/" class="btn btn-primary">Zur Grafik</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Skandinavien  -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card" style="width: 100%;">
+                    <img class="card-img-top" src="<%= require('./assets/skandinavien-s.jpg') %>" alt="Ausschnitt einer Karte Skandinaviens">
+                    <div class="card-body">
+                        <h5 class="card-title">Die Karte des Rumtreibers</h5>
+                        <p class="card-text">Ein bisschen Angeberei, ein bisschen Spieltrieb: 2014 habe ich einen Teil meiner Interrail-Tour durch Skandinavien per GPS getrackt. Das Ergebnis ist diese nette Erinnerung in Kartenform. Postkarten habe ich trotzdem verschickt.</p>
+                        <a target="_blank" href="http://madaman.de/misc/skandinavien/" class="btn btn-primary">Zur Karte</a>
                     </div>
                 </div>
             </div>
@@ -160,7 +178,7 @@
                         </div>
 
                         <!-- SZ -->
-                        <div class="cd-timeline__block js-cd-block">
+                        <div class="cd-timeline__block cd-timeline__block--right js-cd-block">
                             <div class="cd-timeline__img cd-timeline__img--work js-cd-img">
                                 <img src="<%= require('./assets/ios-build.svg') %>" alt="Picture">
                             </div>
@@ -186,7 +204,7 @@
                         </div>
 
                         <!-- SZ Magazin -->
-                        <div class="cd-timeline__block js-cd-block">
+                        <div class="cd-timeline__block cd-timeline__block--right js-cd-block">
                             <div class="cd-timeline__img cd-timeline__img--work js-cd-img">
                                 <img src="<%= require('./assets/ios-build.svg') %>" alt="Picture">
                             </div>
@@ -199,7 +217,7 @@
                         </div>
 
                         <!-- RadioWelt -->
-                        <div class="cd-timeline__block js-cd-block">
+                        <div class="cd-timeline__block cd-timeline__block--right js-cd-block">
                             <div class="cd-timeline__img cd-timeline__img--work js-cd-img">
                                 <img src="<%= require('./assets/ios-build.svg') %>" alt="Picture">
                             </div>
@@ -218,14 +236,14 @@
                             </div>
                     
                             <div class="cd-timeline__content js-cd-content">
-                                <h4>University of Oulu, Finnland</h4>
-                                <p>Auslandsstudium</p>
+                                <h4>Auslandssemester in Finnland</h4>
+                                <p>University of Oulu</p>
                                 <span class="cd-timeline__date">September - Dezember 2013</span>
                             </div>
                         </div>
 
                         <!-- Sommernotizbuch -->
-                        <div class="cd-timeline__block js-cd-block">
+                        <div class="cd-timeline__block cd-timeline__block--right js-cd-block">
                             <div class="cd-timeline__img cd-timeline__img--work js-cd-img">
                                 <img src="<%= require('./assets/ios-build.svg') %>" alt="Picture">
                             </div>

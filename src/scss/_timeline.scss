@@ -243,20 +243,20 @@
             left: 122%;
             top: 6px;
         }
-        .cd-timeline__block:nth-child(even) .cd-timeline__content {
+        .cd-timeline__block.cd-timeline__block--right .cd-timeline__content {
             float: right;
         }
-        .cd-timeline__block:nth-child(even) .cd-timeline__content::before {
+        .cd-timeline__block.cd-timeline__block--right .cd-timeline__content::before {
             top: 24px;
             left: auto;
             right: 100%;
             border-color: transparent;
             border-right-color: $color-lightgrey;
         }
-        .cd-timeline__block:nth-child(even) .cd-timeline__read-more {
+        .cd-timeline__block.cd-timeline__block--right .cd-timeline__read-more {
             float: right;
         }
-        .cd-timeline__block:nth-child(even) .cd-timeline__date {
+        .cd-timeline__block.cd-timeline__block--right .cd-timeline__date {
             left: auto;
             right: 122%;
             text-align: right;
@@ -270,7 +270,7 @@
 
     @include media-breakpoint-up(lg) {
     /* inverse bounce effect on even content blocks */
-        .cd-timeline__block:nth-child(even) .cd-timeline__content.cd-timeline__content--bounce-in {
+        .cd-timeline__block.cd-timeline__block--right .cd-timeline__content.cd-timeline__content--bounce-in {
             -webkit-animation: cd-bounce-2-inverse 0.6s;
                     animation: cd-bounce-2-inverse 0.6s;
         }
