@@ -9,7 +9,8 @@
   "private": false,
   "scripts": {
     "start": "webpack-dev-server --open --host 0.0.0.0",
-    "build": "webpack"
+    "build": "webpack",
+    "deploy": "node ./scripts/deploy.js"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.19",
@@ -20,7 +21,9 @@
     "node-sass": "^4.9.0",
     "optimize-css-assets-webpack-plugin": "^4.0.3",
     "sass-loader": "^7.0.3",
+    "scp2": "^0.5.0",
     "style-loader": "^0.21.0",
+    "superagent": "^5.3.1",
     "uglifyjs-webpack-plugin": "^1.2.7",
     "webpack": "^4.13.0",
     "webpack-cli": "^3.0.8",
