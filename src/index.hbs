@@ -9,7 +9,7 @@
     <meta property="og:type"               content="website" />
     <meta property="og:title"              content="Martin Schön | Webentwickler und Journalist" />
     <meta property="og:description"        content="Martin Schön, Webentwickler für Redaktionen und journalistische Verlage." />
-    <meta property="og:image"              content="http://www.argonn.me/<%= require('./assets/social.jpg') %>" />
+    <meta property="og:image"              content="http://www.argonn.me/./assets/social.jpg" />
 
 </head>
 <body>
@@ -17,23 +17,23 @@
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <div class="media profile">
-                <img src="<%= require('./assets/profile.jpg') %>"
+                <img src="{{ profile.imageUrl }}"
                     class="align-self-center profile-pic">
                 <div class="media-body">
-                    <h1 class="display-4">Martin Schön</h1>
+                    <h1 class="display-4">{{ profile.name }}</h1>
                     <p class="lead">Code und Geschichten</p>
                     <p class="social-icons">
                         <a target="_blank" href="https://twitter.com/mgschoen">
-                            <img src="<%= require('./assets/logo-twitter.svg') %>" class="social-icon">
+                            <img src="./assets/logo-twitter.svg" class="social-icon">
                         </a>
                         <a target="_blank" href="https://github.com/mgschoen">
-                            <img src="<%= require('./assets/logo-github.svg') %>" class="social-icon">
+                            <img src="./assets/logo-github.svg" class="social-icon">
                         </a>
                         <a target="_blank" href="https://www.facebook.com/martti.kaunis">
-                            <img src="<%= require('./assets/logo-facebook.svg') %>" class="social-icon">
+                            <img src="./assets/logo-facebook.svg" class="social-icon">
                         </a>
                         <a target="_blank" href="mailto:martingeorg.schoen@gmail.com">
-                            <img src="<%= require('./assets/md-mail.svg') %>" class="social-icon">
+                            <img src="./assets/md-mail.svg" class="social-icon">
                         </a>
                     </p>
                 </div>
@@ -53,7 +53,7 @@
             <!-- Z2X -->
             <div class="col-sm-6 col-lg-4">
                 <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="<%= require('./assets/z2x.jpg') %>" alt="Screenshot einer Webseite">
+                    <img class="card-img-top" src="./assets/z2x.jpg" alt="Screenshot einer Webseite">
                     <div class="card-body">
                         <h5 class="card-title">Webseiten-Relaunch für Z2X</h5>
                         <p class="card-text">Die Festivalreihe Z2X von ZEIT ONLINE hat seit 2019 eine neue Webseite mit neuer Nutzerverwaltung und neuem Bewerbermanagement. Ich habe den Relaunch mitkonzipiert und zusammen mit einem Dienstleister umgesetzt.</p>
@@ -64,7 +64,7 @@
             <!-- Audio Landing Pages -->
             <div class="col-sm-6 col-lg-4">
                 <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="<%= require('./assets/voice-apps.jpg') %>" alt="Screenshot einer Webseite">
+                    <img class="card-img-top" src="./assets/voice-apps.jpg" alt="Screenshot einer Webseite">
                     <div class="card-body">
                         <h5 class="card-title">Voice-Apps der ZEIT</h5>
                         <p class="card-text">Ein tägliches Nachrichten-Quiz, ein Newsbriefing und ZEIT-Artikel zum Hören: Für die Voice Apps des Zeitverlags habe ich Landing Pages umgesetzt und bei Konzeption und Qualitätssicherung unterstützt.</p>
@@ -76,7 +76,7 @@
             <!-- PicPic -->
             <div class="col-sm-6 col-lg-4">
                 <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="<%= require('./assets/picpic.jpg') %>" alt="Screenshot einer Web-Anwendung">
+                    <img class="card-img-top" src="./assets/picpic.jpg" alt="Screenshot einer Web-Anwendung">
                     <div class="card-body">
                         <h5 class="card-title">PicPic &ndash; der automatische Fotoredakteur</h5>
                         <p class="card-text">In Breaking-News-Situationen zählt jede Sekunde - und dann ist PicPic zur Stelle. Die Software wählt Fotos für News aus. Ich habe sie entwickelt und zusammen mit der LMU München ausführlich getestet.</p>
@@ -89,7 +89,7 @@
             <!-- Kreml -->
             <div class="col-sm-6 col-lg-4">
                 <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="<%= require('./assets/russland-s.jpg') %>" alt="Screenshot des Artikels">
+                    <img class="card-img-top" src="./assets/russland-s.jpg" alt="Screenshot des Artikels">
                     <div class="card-body">
                         <h5 class="card-title">Der Kreml &ndash; Burg der Geheimnisse</h5>
                         <p class="card-text">Der Palast im Herzen Moskaus gilt als Symbol für unbegrenzte Macht. Doch was verbirgt sich hinter den Mauern? Ein Blick in die Festung des russischen Präsidenten, den ich für SZ.de digital umgesetzt habe.</p>
@@ -100,7 +100,7 @@
             <!-- Driverless Cockpit -->
             <div class="col-sm-6 col-lg-4">
                 <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="<%= require('./assets/driverless-s.jpg') %>" alt="Schematische Darstellung eines Rennautos von oben, außenrum bunte Punkte">
+                    <img class="card-img-top" src="./assets/driverless-s.jpg" alt="Schematische Darstellung eines Rennautos von oben, außenrum bunte Punkte">
                     <div class="card-body">
                         <h5 class="card-title">Driverless Cockpit</h5>
                         <p class="card-text">Was sieht ein selbstfahrendes Rennauto? Und wie wird aus Kameradaten eine Fahrstrecke? Für <a target="_blank" href="https://www.munichmotorsport.de/" target="_blank">municHMotorsport</a> habe ich ein webbasiertes Monitoring-Tool entwickelt. Im Einsatz bei <a target="_blank" href="https://www.formulastudent.de/">Formula Student Germany</a> und <a target="_blank" href="https://www.formula-ata.it/" target="_blank">Formula Student Italy</a>.</p>
@@ -111,7 +111,7 @@
             <!-- Lieblingsgeschichten -->
             <div class="col-sm-6 col-lg-4">
                 <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="<%= require('./assets/lieblingsgeschichten-s.jpg') %>" alt="Titelseite der Ausgabe auf einem Tablet">
+                    <img class="card-img-top" src="./assets/lieblingsgeschichten-s.jpg" alt="Titelseite der Ausgabe auf einem Tablet">
                     <div class="card-body">
                         <h5 class="card-title">"Lieblings&shy;geschichten" aus der SZ für Kinder</h5>
                         <p class="card-text">Warum arbeitet am Berliner Bahnhof ein Hund? Was ist ein Hamsterkauf? Und wie krieg ich nur die freien Tage rum? Zu den Sommerferien habe ich eine digitale Kinderausgabe konzipiert und umgesetzt &ndash; mit den besten Texten und viel Möglichkeit zum Rumklicken.</p>
@@ -123,7 +123,7 @@
             <!-- Sudeten -->
             <div class="col-sm-6 col-lg-4">
                 <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="<%= require('./assets/sudeten-s.jpg') %>" alt="Screenshot des Artikels">
+                    <img class="card-img-top" src="./assets/sudeten-s.jpg" alt="Screenshot des Artikels">
                     <div class="card-body">
                         <h5 class="card-title">Heimat im Kopf</h5>
                         <p class="card-text">70 Jahre nach der Vertreibung der Sudetendeutschen fragt diese Reportage: Wie gehen Vertriebene, Verbliebene und Tschechen heute mit dem Unrecht um? Ein Streifzug durch ein dunkles Kapitel der Nachkriegszeit, den ich technisch für SZ.de umgesetzt habe.</p>
@@ -134,7 +134,7 @@
             <!-- Ernährungspyramide  -->
             <div class="col-sm-6 col-lg-4">
                 <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="<%= require('./assets/ernaehrung-s.jpg') %>" alt="Eine Ernährungspyramide mit bunten Illustrationen">
+                    <img class="card-img-top" src="./assets/ernaehrung-s.jpg" alt="Eine Ernährungspyramide mit bunten Illustrationen">
                     <div class="card-body">
                         <h5 class="card-title">Wie viel wovon?</h5>
                         <p class="card-text">Welche Menge Wasser braucht ein Kind am Tag? Und nach wie vielen Schokoriegeln ist Schluss? Eine interaktive Ernährungspyramide für Vier- bis Zwölfjährige, erschienen in der SZ für Kinder.</p>
@@ -145,7 +145,7 @@
             <!-- Skandinavien  -->
             <div class="col-sm-6 col-lg-4">
                 <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="<%= require('./assets/skandinavien-s.jpg') %>" alt="Ausschnitt einer Karte Skandinaviens">
+                    <img class="card-img-top" src="./assets/skandinavien-s.jpg" alt="Ausschnitt einer Karte Skandinaviens">
                     <div class="card-body">
                         <h5 class="card-title">Die Karte des Rumtreibers</h5>
                         <p class="card-text">Ein bisschen Angeberei, ein bisschen Spieltrieb: 2014 habe ich einen Teil meiner Interrail-Tour durch Skandinavien per GPS getrackt. Das Ergebnis ist diese nette Erinnerung in Kartenform. Postkarten habe ich trotzdem verschickt.</p>
@@ -170,7 +170,7 @@
                         <!-- ZEIT ONLINE -->
                         <div class="cd-timeline__block cd-timeline__block--right js-cd-block">
                             <div class="cd-timeline__img cd-timeline__img--work js-cd-img">
-                                <img src="<%= require('./assets/ios-build.svg') %>" alt="">
+                                <img src="./assets/ios-build.svg" alt="">
                             </div>
                     
                             <div class="cd-timeline__content js-cd-content">
@@ -183,7 +183,7 @@
                         <!-- ZEIT ONLINE -->
                         <div class="cd-timeline__block cd-timeline__block--right js-cd-block">
                             <div class="cd-timeline__img cd-timeline__img--work js-cd-img">
-                                <img src="<%= require('./assets/ios-build.svg') %>" alt="">
+                                <img src="./assets/ios-build.svg" alt="">
                             </div>
                     
                             <div class="cd-timeline__content js-cd-content">
@@ -196,7 +196,7 @@
                         <!-- Medieninformatik -->
                         <div class="cd-timeline__block js-cd-block">
                             <div class="cd-timeline__img cd-timeline__img--education js-cd-img">
-                                <img src="<%= require('./assets/ios-school-white.svg') %>" alt="">
+                                <img src="./assets/ios-school-white.svg" alt="">
                             </div>
                     
                             <div class="cd-timeline__content js-cd-content">
@@ -209,7 +209,7 @@
                         <!-- SZ -->
                         <div class="cd-timeline__block cd-timeline__block--right js-cd-block">
                             <div class="cd-timeline__img cd-timeline__img--work js-cd-img">
-                                <img src="<%= require('./assets/ios-build.svg') %>" alt="">
+                                <img src="./assets/ios-build.svg" alt="">
                             </div>
                     
                             <div class="cd-timeline__content js-cd-content">
@@ -222,7 +222,7 @@
                         <!-- Journalistik -->
                         <div class="cd-timeline__block js-cd-block">
                             <div class="cd-timeline__img cd-timeline__img--education js-cd-img">
-                                <img src="<%= require('./assets/ios-school-white.svg') %>" alt="">
+                                <img src="./assets/ios-school-white.svg" alt="">
                             </div>
                     
                             <div class="cd-timeline__content js-cd-content">
@@ -235,7 +235,7 @@
                         <!-- SZ Magazin -->
                         <div class="cd-timeline__block cd-timeline__block--right js-cd-block">
                             <div class="cd-timeline__img cd-timeline__img--work js-cd-img">
-                                <img src="<%= require('./assets/ios-build.svg') %>" alt="">
+                                <img src="./assets/ios-build.svg" alt="">
                             </div>
                     
                             <div class="cd-timeline__content js-cd-content">
@@ -248,7 +248,7 @@
                         <!-- RadioWelt -->
                         <div class="cd-timeline__block cd-timeline__block--right js-cd-block">
                             <div class="cd-timeline__img cd-timeline__img--work js-cd-img">
-                                <img src="<%= require('./assets/ios-build.svg') %>" alt="">
+                                <img src="./assets/ios-build.svg" alt="">
                             </div>
                     
                             <div class="cd-timeline__content js-cd-content">
@@ -261,7 +261,7 @@
                         <!-- Finnland -->
                         <div class="cd-timeline__block js-cd-block">
                             <div class="cd-timeline__img cd-timeline__img--education js-cd-img">
-                                <img src="<%= require('./assets/ios-school-white.svg') %>" alt="">
+                                <img src="./assets/ios-school-white.svg" alt="">
                             </div>
                     
                             <div class="cd-timeline__content js-cd-content">
@@ -274,7 +274,7 @@
                         <!-- Sommernotizbuch -->
                         <div class="cd-timeline__block cd-timeline__block--right js-cd-block">
                             <div class="cd-timeline__img cd-timeline__img--work js-cd-img">
-                                <img src="<%= require('./assets/ios-build.svg') %>" alt="">
+                                <img src="./assets/ios-build.svg" alt="">
                             </div>
                     
                             <div class="cd-timeline__content js-cd-content">

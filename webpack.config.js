@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+const Handlebars = require('handlebars')
 
 module.exports = {
 
@@ -35,7 +36,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            template: './src/index.html'
+            template: './src/index.hbs'
         }),
         new UglifyJSPlugin({
             sourceMap: true
@@ -70,6 +71,20 @@ module.exports = {
             {
                 test: /\.(svg|jpg|jpeg|png)$/,
                 loader: 'file-loader'
+            },
+
+            // Template compilation
+            {
+                test: /\.hbs$/,
+                loader: 'html-loader',
+                options: {
+                    preprocessor: (content, loaderContext) => {
+                        const templateName = path.basename(loaderContext.resourcePath, '.hbs');
+                        const data = require(`./content/${templateName}.json`);
+                        const template = Handlebars.compile(content);
+                        return template(data);
+                    }
+                }
             }
         ]
     }
