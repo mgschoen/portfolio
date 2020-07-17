@@ -1,6 +1,231 @@
 {
     "profile": {
-        "name": "Peter Lustig",
-        "imageUrl": "./assets/profile.jpg"
-    }
+        "name": "Martin Schön",
+        "description": "Webentwickler und Journalist",
+        "tagline": "Code und Geschichten",
+        "imageUrl": "./assets/profile.jpg",
+        "address": "Schwalbenstraße 47, 22305 Hamburg"
+    },
+    "meta": {
+        "description": "Martin Schön, Webentwickler für Redaktionen und journalistische Verlage.",
+        "socialImageUrl": "./assets/social.jpg"
+    },
+    "social": {
+        "twitter": {
+            "url": "https://twitter.com/mgschoen",
+            "imageUrl": "./assets/logo-twitter.svg"
+        },
+        "github": {
+            "url": "https://github.com/mgschoen",
+            "imageUrl": "./assets/logo-github.svg"
+        },
+        "facebook": {
+            "url": "https://www.facebook.com/martti.kaunis",
+            "imageUrl": "./assets/logo-facebook.svg"
+        },
+        "mail": {
+            "address": "martingeorg.schoen@gmail.com",
+            "imageUrl": "./assets/md-mail.svg"
+        }
+    },
+    "projects": [
+        {
+            "headline": "Webseiten-Relaunch für Z2X",
+            "htmlDescription": "Die Festivalreihe Z2X von ZEIT ONLINE hat seit 2019 eine neue Webseite mit neuer Nutzerverwaltung und neuem Bewerbermanagement. Ich habe den Relaunch mitkonzipiert und zusammen mit einem Dienstleister umgesetzt.",
+            "image": {
+                "url": "./assets/z2x.jpg",
+                "alt": "Screenshot einer Webseite"
+            },
+            "buttons": [
+                {
+                    "label": "Zur Webseite",
+                    "url": "https://z2x.zeit.de/"
+                }
+            ]
+        },
+        {
+            "headline": "Voice-Apps der ZEIT",
+            "htmlDescription": "Ein tägliches Nachrichten-Quiz, ein Newsbriefing und ZEIT-Artikel zum Hören: Für die Voice Apps des Zeitverlags habe ich Landing Pages umgesetzt und bei Konzeption und Qualitätssicherung unterstützt.",
+            "image": {
+                "url": "./assets/voice-apps.jpg",
+                "alt": "Screenshot einer Webseite"
+            },
+            "buttons": [
+                {
+                    "label": "Alexa-Skills",
+                    "url": "https://www.zeit.de/alexa-skills"
+                },
+                {
+                    "label": "Apps für Assistant",
+                    "url": "https://www.zeit.de/google-assistant"
+                }
+            ]
+        },
+        {
+            "headline": "PicPic &ndash; der automatische Fotoredakteur",
+            "htmlDescription": "In Breaking-News-Situationen zählt jede Sekunde - und dann ist PicPic zur Stelle. Die Software wählt Fotos für News aus. Ich habe sie entwickelt und zusammen mit der LMU München ausführlich getestet.",
+            "image": {
+                "url": "./assets/picpic.jpg",
+                "alt": "Screenshot einer Web-Anwendung"
+            },
+            "buttons": [
+                {
+                    "label": "Demo",
+                    "url": "http://picpic-demo.argonn.me/"
+                },
+                {
+                    "label": "Trainingsdaten",
+                    "url": "http://picpic-explorer.argonn.me/"
+                },
+                {
+                    "label": "Code",
+                    "url": "https://github.com/mgschoen?utf8=%E2%9C%93&tab=repositories&q=picpic&type=&language="
+                }
+            ]
+        },
+        {
+            "headline": "Der Kreml &ndash; Burg der Geheimnisse",
+            "htmlDescription": "Der Palast im Herzen Moskaus gilt als Symbol für unbegrenzte Macht. Doch was verbirgt sich hinter den Mauern? Ein Blick in die Festung des russischen Präsidenten, den ich für SZ.de digital umgesetzt habe.",
+            "image": {
+                "url": "./assets/russland-s.jpg",
+                "alt": "Screenshot des Artikels"
+            },
+            "buttons": [
+                {
+                    "label": "Zur Reportage",
+                    "url": "https://projekte.sueddeutsche.de/artikel/gesellschaft/kreml-in-moskau-die-burg-der-geheimnisse-e210387/"
+                }
+            ]
+        },
+        {
+            "headline": "Driverless Cockpit",
+            "htmlDescription": "Was sieht ein selbstfahrendes Rennauto? Und wie wird aus Kameradaten eine Fahrstrecke? Für <a target=\"_blank\" href=\"https://www.munichmotorsport.de/" target="_blank">municHMotorsport</a> habe ich ein webbasiertes Monitoring-Tool entwickelt. Im Einsatz bei <a target="_blank" href="https://www.formulastudent.de/\">Formula Student Germany</a> und <a target=\"_blank\" href=\"https://www.formula-ata.it/\" target=\"_blank\">Formula Student Italy</a>.",
+            "image": {
+                "url": "./assets/driverless-s.jpg",
+                "alt": "Schematische Darstellung eines Rennautos von oben, außenrum bunte Punkte"
+            },
+            "buttons": [
+                {
+                    "label": "Code",
+                    "url": "https://github.com/mgschoen/driverless-cockpit-backend"
+                }
+            ]
+        },
+        {
+            "headline": "\"Lieblings&shy;geschichten\" aus der SZ für Kinder",
+            "htmlDescription": "Warum arbeitet am Berliner Bahnhof ein Hund? Was ist ein Hamsterkauf? Und wie krieg ich nur die freien Tage rum? Zu den Sommerferien habe ich eine digitale Kinderausgabe konzipiert und umgesetzt &ndash; mit den besten Texten und viel Möglichkeit zum Rumklicken.",
+            "image": {
+                "url": "./assets/lieblingsgeschichten-s.jpg",
+                "alt": "Titelseite der Ausgabe auf einem Tablet"
+            },
+            "buttons": [
+                {
+                    "label": "Zur Ausgabe",
+                    "url": "https://www.sueddeutsche.de/lieblingsgeschichten"
+                },
+                {
+                    "label": "Über das Heft",
+                    "url": "http://share.argonn.me/jule-kinderzeitung.pdf"
+                }
+            ]
+        },
+        {
+            "headline": "Heimat im Kopf",
+            "htmlDescription": "70 Jahre nach der Vertreibung der Sudetendeutschen fragt diese Reportage: Wie gehen Vertriebene, Verbliebene und Tschechen heute mit dem Unrecht um? Ein Streifzug durch ein dunkles Kapitel der Nachkriegszeit, den ich technisch für SZ.de umgesetzt habe.",
+            "image": {
+                "url": "./assets/sudeten-s.jpg",
+                "alt": "Screenshot des Artikels"
+            },
+            "buttons": [
+                {
+                    "label": "Zur Reportage",
+                    "url": "http://gfx.sueddeutsche.de/politik/sudetendeutsche/index.html"
+                }
+            ]
+        },
+        {
+            "headline": "Wie viel wovon?",
+            "htmlDescription": "Welche Menge Wasser braucht ein Kind am Tag? Und nach wie vielen Schokoriegeln ist Schluss? Eine interaktive Ernährungspyramide für Vier- bis Zwölfjährige, erschienen in der SZ für Kinder.",
+            "image": {
+                "url": "./assets/ernaehrung-s.jpg",
+                "alt": "Eine Ernährungspyramide mit bunten Illustrationen"
+            },
+            "buttons": [
+                {
+                    "label": "Zur Grafik",
+                    "url": "http://share.argonn.me/kindersz-ernaehrung/"
+                }
+            ]
+        },
+        {
+            "headline": "Die Karte des Rumtreibers",
+            "htmlDescription": "Ein bisschen Angeberei, ein bisschen Spieltrieb: 2014 habe ich einen Teil meiner Interrail-Tour durch Skandinavien per GPS getrackt. Das Ergebnis ist diese nette Erinnerung in Kartenform. Postkarten habe ich trotzdem verschickt.",
+            "image": {
+                "url": "./assets/skandinavien-s.jpg",
+                "alt": "Ausschnitt einer Karte Skandinaviens"
+            },
+            "buttons": [
+                {
+                    "label": "Zur Karte",
+                    "url": "http://madaman.de/misc/skandinavien/"
+                }
+            ]
+        }
+    ],
+    "milestones": [
+        {
+            "headline": "SPIEGEL TechLab",
+            "description": "Frontend Developer",
+            "date": "März 2020 - heute",
+            "type": "work"
+        },
+        {
+            "headline": "ZEIT ONLINE",
+            "description": "Entwicklungsredakteur",
+            "date": "Oktober 2018 - Februar 2020",
+            "type": "work"
+        },
+        {
+            "headline": "B.Sc. Medieninformatik",
+            "description": "Ludwig-Maximilians-Universität München",
+            "date": "Oktober 2014 - Oktober 2018",
+            "type": "education"
+        },
+        {
+            "headline": "Süddeutsche Zeitung",
+            "description": "Mitarbeiter in der Redaktion Digitale Ausgabe. Bis Februar 2016 freier Mitarbeiter, ab März 2016 Werkstudent",
+            "date": "September 2014 - Juli 2018",
+            "type": "work"
+        },
+        {
+            "headline": "B.A. Journalistik",
+            "description": "Katholische Universität Eichstätt-Ingolstadt",
+            "date": "Oktober 2011 - Juli 2014",
+            "type": "education"
+        },
+        {
+            "headline": "Süddeutsche Zeitung Magazin",
+            "description": "Praktikum",
+            "date": "Februar - April 2014",
+            "type": "work"
+        },
+        {
+            "headline": "Bayern 2 RadioWelt",
+            "description": "Praktikum",
+            "date": "Januar 2014",
+            "type": "work"
+        },
+        {
+            "headline": "Auslandssemester in Finnland",
+            "description": "University of Oulu",
+            "date": "September - Dezember 2013",
+            "type": "education"
+        },
+        {
+            "headline": "Bayerischer Rundfunk",
+            "description": "Ausbildungsprogramm \"Sommernotizbuch\"",
+            "date": "Juli und August 2013",
+            "type": "work"
+        }
+    ]
 }
