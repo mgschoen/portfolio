@@ -2,14 +2,14 @@
 <html lang="de">
 <head>
     <meta charset="utf-8">
-    <title>Martin Schön | Journalist und Webentwickler</title>
+    <title>{{profile.name}} | {{profile.description}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
     <meta property="og:url"                content="http://argonn.me/" />
     <meta property="og:type"               content="website" />
-    <meta property="og:title"              content="Martin Schön | Webentwickler und Journalist" />
-    <meta property="og:description"        content="Martin Schön, Webentwickler für Redaktionen und journalistische Verlage." />
-    <meta property="og:image"              content="http://www.argonn.me/./assets/social.jpg" />
+    <meta property="og:title"              content="{{profile.name}} | {{profile.description}}" />
+    <meta property="og:description"        content="{{meta.description}}" />
+    <meta property="og:image"              content="{{meta.socialImageUrl}}" />
 
 </head>
 <body>
@@ -20,21 +20,20 @@
                 <img src="{{ profile.imageUrl }}"
                     class="align-self-center profile-pic">
                 <div class="media-body">
-                    <h1 class="display-4">{{ profile.name }}</h1>
-                    <p class="lead">Code und Geschichten</p>
+                    <h1 class="display-4">{{profile.name}}</h1>
+                    <p class="lead">{{profile.tagline}}</p>
                     <p class="social-icons">
-                        <a target="_blank" href="https://twitter.com/mgschoen">
-                            <img src="./assets/logo-twitter.svg" class="social-icon">
-                        </a>
-                        <a target="_blank" href="https://github.com/mgschoen">
-                            <img src="./assets/logo-github.svg" class="social-icon">
-                        </a>
-                        <a target="_blank" href="https://www.facebook.com/martti.kaunis">
-                            <img src="./assets/logo-facebook.svg" class="social-icon">
-                        </a>
-                        <a target="_blank" href="mailto:martingeorg.schoen@gmail.com">
-                            <img src="./assets/md-mail.svg" class="social-icon">
-                        </a>
+                        {% for socialType, socialEntry in social %}
+                            {% if socialType == "mail" %}
+                                <a target="_blank" href="mailto:{{socialEntry.address}}">
+                                    <img src="{{socialEntry.imageUrl}}" class="social-icon">
+                                </a>
+                            {% else %}
+                                <a target="_blank" href="{{socialEntry.url}}">
+                                    <img src="{{socialEntry.imageUrl}}" class="social-icon">
+                                </a>
+                            {% endif %}
+                        {% endfor %}
                     </p>
                 </div>
             </div>
