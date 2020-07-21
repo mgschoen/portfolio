@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
-const Handlebars = require('handlebars')
+const nunjucks = require('nunjucks')
 
 module.exports = {
 
@@ -21,7 +21,8 @@ module.exports = {
 
     // Dev environment
     devServer: {
-        contentBase: './dist'
+        contentBase: './dist',
+        disableHostCheck: true
     },
 
     // Minification and source maps
@@ -36,7 +37,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            template: './src/index.hbs'
+            template: './src/index.njk'
         }),
         new UglifyJSPlugin({
             sourceMap: true
@@ -75,14 +76,14 @@ module.exports = {
 
             // Template compilation
             {
-                test: /\.hbs$/,
+                test: /\.njk$/,
                 loader: 'html-loader',
                 options: {
                     preprocessor: (content, loaderContext) => {
-                        const templateName = path.basename(loaderContext.resourcePath, '.hbs');
-                        const data = require(`./content/${templateName}.json`);
-                        const template = Handlebars.compile(content);
-                        return template(data);
+                        const templateName = path.basename(loaderContext.resourcePath, '.njk')
+                        const data = require(`./content/${templateName}.json`)
+                        const template = nunjucks.compile(content)
+                        return template.render(data)
                     }
                 }
             }
