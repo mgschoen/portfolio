@@ -49,109 +49,20 @@
         </div>
 
         <div class="row card-row portfolio-card-row">
-            <!-- Z2X -->
-            <div class="col-sm-6 col-lg-4">
-                <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="./assets/z2x.jpg" alt="Screenshot einer Webseite">
-                    <div class="card-body">
-                        <h5 class="card-title">Webseiten-Relaunch für Z2X</h5>
-                        <p class="card-text">Die Festivalreihe Z2X von ZEIT ONLINE hat seit 2019 eine neue Webseite mit neuer Nutzerverwaltung und neuem Bewerbermanagement. Ich habe den Relaunch mitkonzipiert und zusammen mit einem Dienstleister umgesetzt.</p>
-                        <a target="_blank" href="https://z2x.zeit.de/" class="btn btn-primary">Zur Webseite</a>
+            {% for project in projects %}
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card" style="width: 100%;">
+                        <img class="card-img-top" src="{{project.image.url}}" alt="{{project.image.alt}}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{project.headline | safe}}</h5>
+                            <p class="card-text">{{project.htmlDescription | safe}}</p>
+                            {% for button in project.buttons %}
+                                <a target="_blank" href="{{button.url}}" class="btn btn-primary">{{button.label}}</a>
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Audio Landing Pages -->
-            <div class="col-sm-6 col-lg-4">
-                <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="./assets/voice-apps.jpg" alt="Screenshot einer Webseite">
-                    <div class="card-body">
-                        <h5 class="card-title">Voice-Apps der ZEIT</h5>
-                        <p class="card-text">Ein tägliches Nachrichten-Quiz, ein Newsbriefing und ZEIT-Artikel zum Hören: Für die Voice Apps des Zeitverlags habe ich Landing Pages umgesetzt und bei Konzeption und Qualitätssicherung unterstützt.</p>
-                        <a target="_blank" href="https://www.zeit.de/alexa-skills" class="btn btn-primary">Alexa-Skills</a>
-                        <a target="_blank" href="https://www.zeit.de/google-assistant" class="btn btn-primary">Apps für Assistant</a>
-                    </div>
-                </div>
-            </div>
-            <!-- PicPic -->
-            <div class="col-sm-6 col-lg-4">
-                <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="./assets/picpic.jpg" alt="Screenshot einer Web-Anwendung">
-                    <div class="card-body">
-                        <h5 class="card-title">PicPic &ndash; der automatische Fotoredakteur</h5>
-                        <p class="card-text">In Breaking-News-Situationen zählt jede Sekunde - und dann ist PicPic zur Stelle. Die Software wählt Fotos für News aus. Ich habe sie entwickelt und zusammen mit der LMU München ausführlich getestet.</p>
-                        <a target="_blank" href="http://picpic-demo.argonn.me/" class="btn btn-primary">Demo</a>
-                        <a target="_blank" href="http://picpic-explorer.argonn.me/" class="btn btn-primary">Trainingsdaten</a>
-                        <a target="_blank" href="https://github.com/mgschoen?utf8=%E2%9C%93&tab=repositories&q=picpic&type=&language=" class="btn btn-primary">Code</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Kreml -->
-            <div class="col-sm-6 col-lg-4">
-                <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="./assets/russland-s.jpg" alt="Screenshot des Artikels">
-                    <div class="card-body">
-                        <h5 class="card-title">Der Kreml &ndash; Burg der Geheimnisse</h5>
-                        <p class="card-text">Der Palast im Herzen Moskaus gilt als Symbol für unbegrenzte Macht. Doch was verbirgt sich hinter den Mauern? Ein Blick in die Festung des russischen Präsidenten, den ich für SZ.de digital umgesetzt habe.</p>
-                        <a target="_blank" href="https://projekte.sueddeutsche.de/artikel/gesellschaft/kreml-in-moskau-die-burg-der-geheimnisse-e210387/" class="btn btn-primary">Zur Reportage</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Driverless Cockpit -->
-            <div class="col-sm-6 col-lg-4">
-                <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="./assets/driverless-s.jpg" alt="Schematische Darstellung eines Rennautos von oben, außenrum bunte Punkte">
-                    <div class="card-body">
-                        <h5 class="card-title">Driverless Cockpit</h5>
-                        <p class="card-text">Was sieht ein selbstfahrendes Rennauto? Und wie wird aus Kameradaten eine Fahrstrecke? Für <a target="_blank" href="https://www.munichmotorsport.de/" target="_blank">municHMotorsport</a> habe ich ein webbasiertes Monitoring-Tool entwickelt. Im Einsatz bei <a target="_blank" href="https://www.formulastudent.de/">Formula Student Germany</a> und <a target="_blank" href="https://www.formula-ata.it/" target="_blank">Formula Student Italy</a>.</p>
-                        <a target="_blank" href="https://github.com/mgschoen/driverless-cockpit-backend" class="btn btn-primary">Code</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Lieblingsgeschichten -->
-            <div class="col-sm-6 col-lg-4">
-                <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="./assets/lieblingsgeschichten-s.jpg" alt="Titelseite der Ausgabe auf einem Tablet">
-                    <div class="card-body">
-                        <h5 class="card-title">"Lieblings&shy;geschichten" aus der SZ für Kinder</h5>
-                        <p class="card-text">Warum arbeitet am Berliner Bahnhof ein Hund? Was ist ein Hamsterkauf? Und wie krieg ich nur die freien Tage rum? Zu den Sommerferien habe ich eine digitale Kinderausgabe konzipiert und umgesetzt &ndash; mit den besten Texten und viel Möglichkeit zum Rumklicken.</p>
-                        <a target="_blank" href="https://www.sueddeutsche.de/lieblingsgeschichten" class="btn btn-primary">Zur Ausgabe</a>
-                        <a target="_blank" href="http://share.argonn.me/jule-kinderzeitung.pdf" class="btn btn-primary">Über das Heft</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Sudeten -->
-            <div class="col-sm-6 col-lg-4">
-                <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="./assets/sudeten-s.jpg" alt="Screenshot des Artikels">
-                    <div class="card-body">
-                        <h5 class="card-title">Heimat im Kopf</h5>
-                        <p class="card-text">70 Jahre nach der Vertreibung der Sudetendeutschen fragt diese Reportage: Wie gehen Vertriebene, Verbliebene und Tschechen heute mit dem Unrecht um? Ein Streifzug durch ein dunkles Kapitel der Nachkriegszeit, den ich technisch für SZ.de umgesetzt habe.</p>
-                        <a target="_blank" href="http://gfx.sueddeutsche.de/politik/sudetendeutsche/index.html" class="btn btn-primary">Zur Reportage</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Ernährungspyramide  -->
-            <div class="col-sm-6 col-lg-4">
-                <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="./assets/ernaehrung-s.jpg" alt="Eine Ernährungspyramide mit bunten Illustrationen">
-                    <div class="card-body">
-                        <h5 class="card-title">Wie viel wovon?</h5>
-                        <p class="card-text">Welche Menge Wasser braucht ein Kind am Tag? Und nach wie vielen Schokoriegeln ist Schluss? Eine interaktive Ernährungspyramide für Vier- bis Zwölfjährige, erschienen in der SZ für Kinder.</p>
-                        <a target="_blank" href="http://share.argonn.me/kindersz-ernaehrung/" class="btn btn-primary">Zur Grafik</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Skandinavien  -->
-            <div class="col-sm-6 col-lg-4">
-                <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="./assets/skandinavien-s.jpg" alt="Ausschnitt einer Karte Skandinaviens">
-                    <div class="card-body">
-                        <h5 class="card-title">Die Karte des Rumtreibers</h5>
-                        <p class="card-text">Ein bisschen Angeberei, ein bisschen Spieltrieb: 2014 habe ich einen Teil meiner Interrail-Tour durch Skandinavien per GPS getrackt. Das Ergebnis ist diese nette Erinnerung in Kartenform. Postkarten habe ich trotzdem verschickt.</p>
-                        <a target="_blank" href="http://madaman.de/misc/skandinavien/" class="btn btn-primary">Zur Karte</a>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
 
         <div class="row portfolio-header">
@@ -165,124 +76,22 @@
             <div class="col-12">
                 <section class="cd-timeline js-cd-timeline">
                     <div class="cd-timeline__container">
-
-                        <!-- ZEIT ONLINE -->
-                        <div class="cd-timeline__block cd-timeline__block--right js-cd-block">
-                            <div class="cd-timeline__img cd-timeline__img--work js-cd-img">
-                                <img src="./assets/ios-build.svg" alt="">
-                            </div>
-                    
-                            <div class="cd-timeline__content js-cd-content">
-                                <h4>SPIEGEL TechLab</h4>
-                                <p>Frontend Developer</p>
-                                <span class="cd-timeline__date">März 2020 - heute</span>
-                            </div>
-                        </div>
-
-                        <!-- ZEIT ONLINE -->
-                        <div class="cd-timeline__block cd-timeline__block--right js-cd-block">
-                            <div class="cd-timeline__img cd-timeline__img--work js-cd-img">
-                                <img src="./assets/ios-build.svg" alt="">
-                            </div>
-                    
-                            <div class="cd-timeline__content js-cd-content">
-                                <h4>ZEIT ONLINE</h4>
-                                <p>Entwicklungsredakteur</p>
-                                <span class="cd-timeline__date">Oktober 2018 - Februar 2020</span>
-                            </div>
-                        </div>
-
-                        <!-- Medieninformatik -->
-                        <div class="cd-timeline__block js-cd-block">
-                            <div class="cd-timeline__img cd-timeline__img--education js-cd-img">
-                                <img src="./assets/ios-school-white.svg" alt="">
-                            </div>
-                    
-                            <div class="cd-timeline__content js-cd-content">
-                                <h4>B.Sc. Medieninformatik</h4>
-                                <p>Ludwig-Maximilians-Universität München</p>
-                                <span class="cd-timeline__date">Oktober 2014 - Oktober 2018</span>
-                            </div>
-                        </div>
-
-                        <!-- SZ -->
-                        <div class="cd-timeline__block cd-timeline__block--right js-cd-block">
-                            <div class="cd-timeline__img cd-timeline__img--work js-cd-img">
-                                <img src="./assets/ios-build.svg" alt="">
-                            </div>
-                    
-                            <div class="cd-timeline__content js-cd-content">
-                                <h4>Süddeutsche Zeitung</h4>
-                                <p>Mitarbeiter in der Redaktion Digitale Ausgabe. Bis Februar 2016 freier Mitarbeiter, ab März 2016 Werkstudent</p>
-                                <span class="cd-timeline__date">September 2014 - Juli 2018</span>
-                            </div>
-                        </div>
-
-                        <!-- Journalistik -->
-                        <div class="cd-timeline__block js-cd-block">
-                            <div class="cd-timeline__img cd-timeline__img--education js-cd-img">
-                                <img src="./assets/ios-school-white.svg" alt="">
-                            </div>
-                    
-                            <div class="cd-timeline__content js-cd-content">
-                                <h4>B.A. Journalistik</h4>
-                                <p>Katholische Universität Eichstätt-Ingolstadt</p>
-                                <span class="cd-timeline__date">Oktober 2011 - Juli 2014</span>
-                            </div>
-                        </div>
-
-                        <!-- SZ Magazin -->
-                        <div class="cd-timeline__block cd-timeline__block--right js-cd-block">
-                            <div class="cd-timeline__img cd-timeline__img--work js-cd-img">
-                                <img src="./assets/ios-build.svg" alt="">
-                            </div>
-                    
-                            <div class="cd-timeline__content js-cd-content">
-                                <h4>Süddeutsche Zeitung Magazin</h4>
-                                <p>Praktikum</p>
-                                <span class="cd-timeline__date">Februar - April 2014</span>
-                            </div>
-                        </div>
-
-                        <!-- RadioWelt -->
-                        <div class="cd-timeline__block cd-timeline__block--right js-cd-block">
-                            <div class="cd-timeline__img cd-timeline__img--work js-cd-img">
-                                <img src="./assets/ios-build.svg" alt="">
-                            </div>
-                    
-                            <div class="cd-timeline__content js-cd-content">
-                                <h4>Bayern 2 RadioWelt</h4>
-                                <p>Praktikum</p>
-                                <span class="cd-timeline__date">Januar 2014</span>
-                            </div>
-                        </div>
-
-                        <!-- Finnland -->
-                        <div class="cd-timeline__block js-cd-block">
-                            <div class="cd-timeline__img cd-timeline__img--education js-cd-img">
-                                <img src="./assets/ios-school-white.svg" alt="">
-                            </div>
-                    
-                            <div class="cd-timeline__content js-cd-content">
-                                <h4>Auslandssemester in Finnland</h4>
-                                <p>University of Oulu</p>
-                                <span class="cd-timeline__date">September - Dezember 2013</span>
-                            </div>
-                        </div>
-
-                        <!-- Sommernotizbuch -->
-                        <div class="cd-timeline__block cd-timeline__block--right js-cd-block">
-                            <div class="cd-timeline__img cd-timeline__img--work js-cd-img">
-                                <img src="./assets/ios-build.svg" alt="">
-                            </div>
-                    
-                            <div class="cd-timeline__content js-cd-content">
-                                <h4>Bayerischer Rundfunk</h4>
-                                <p>Ausbildungsprogramm "Sommernotizbuch"</p>
-                                <span class="cd-timeline__date">Juli und August 2013</span>
-                            </div>
-                        </div>
-
+                        {% for milestone in milestones %}
+                            {% set imageName = "ios-school-white" %}
+                            {% if milestone.type == "work" %}
+                                {% set imageName = "ios-build" %}
+                            {% endif %}
+                            <div class="cd-timeline__block {% if milestone.type == 'work' %}cd-timeline__block--right {% endif %}js-cd-block">
+                                <div class="cd-timeline__img cd-timeline__img--{{milestone.type}} js-cd-img">
+                                    <img src="./assets/{{imageName}}.svg" alt="">
+                                </div>
+                                <div class="cd-timeline__content js-cd-content">
+                                    <h4>{{milestone.headline}}</h4>
+                                    <p>{{milestone.description}}</p>
+                                    <span class="cd-timeline__date">{{milestone.date}}</span>
+                                </div>
+                            </div>    
+                        {% endfor %}
                     </div>
                 </section>
             </div>
@@ -297,9 +106,9 @@
                     <!-- Imprint -->
                     <div class="media">
                         <div class="media-body">
-                            <h4>Martin Schön</h4>
-                            <p><a target="_blank" href="mailto:martingeorg.schoen@gmail.com">martingeorg.schoen@gmail.com</a></p>
-                            <p>Schwalbenstra&szlig;e 47, 22305 Hamburg</p>
+                            <h4>{{profile.name}}</h4>
+                            <p><a target="_blank" href="mailto:{{social.mail.address}}">{{social.mail.address}}</a></p>
+                            <p>{{profile.address}}</p>
                         </div>
                     </div>
                 </div>

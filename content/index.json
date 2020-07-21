@@ -62,7 +62,7 @@
             ]
         },
         {
-            "headline": "PicPic &ndash; der automatische Fotoredakteur",
+            "headline": "PicPic – der automatische Fotoredakteur",
             "htmlDescription": "In Breaking-News-Situationen zählt jede Sekunde - und dann ist PicPic zur Stelle. Die Software wählt Fotos für News aus. Ich habe sie entwickelt und zusammen mit der LMU München ausführlich getestet.",
             "image": {
                 "url": "./assets/picpic.jpg",
@@ -84,7 +84,7 @@
             ]
         },
         {
-            "headline": "Der Kreml &ndash; Burg der Geheimnisse",
+            "headline": "Der Kreml – Burg der Geheimnisse",
             "htmlDescription": "Der Palast im Herzen Moskaus gilt als Symbol für unbegrenzte Macht. Doch was verbirgt sich hinter den Mauern? Ein Blick in die Festung des russischen Präsidenten, den ich für SZ.de digital umgesetzt habe.",
             "image": {
                 "url": "./assets/russland-s.jpg",
@@ -113,7 +113,7 @@
         },
         {
             "headline": "\"Lieblings&shy;geschichten\" aus der SZ für Kinder",
-            "htmlDescription": "Warum arbeitet am Berliner Bahnhof ein Hund? Was ist ein Hamsterkauf? Und wie krieg ich nur die freien Tage rum? Zu den Sommerferien habe ich eine digitale Kinderausgabe konzipiert und umgesetzt &ndash; mit den besten Texten und viel Möglichkeit zum Rumklicken.",
+            "htmlDescription": "Warum arbeitet am Berliner Bahnhof ein Hund? Was ist ein Hamsterkauf? Und wie krieg ich nur die freien Tage rum? Zu den Sommerferien habe ich eine digitale Kinderausgabe konzipiert und umgesetzt – mit den besten Texten und viel Möglichkeit zum Rumklicken.",
             "image": {
                 "url": "./assets/lieblingsgeschichten-s.jpg",
                 "alt": "Titelseite der Ausgabe auf einem Tablet"
