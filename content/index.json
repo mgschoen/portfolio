@@ -8,7 +8,7 @@
     },
     "meta": {
         "description": "Martin Schön, Webentwickler für Redaktionen und journalistische Verlage.",
-        "socialImageUrl": "./assets/social.jpg"
+        "socialImageUrl": "http://share.argonn.me/social.jpg"
     },
     "social": {
         "twitter": {
@@ -99,7 +99,7 @@
         },
         {
             "headline": "Driverless Cockpit",
-            "htmlDescription": "Was sieht ein selbstfahrendes Rennauto? Und wie wird aus Kameradaten eine Fahrstrecke? Für <a target=\"_blank\" href=\"https://www.munichmotorsport.de/" target="_blank">municHMotorsport</a> habe ich ein webbasiertes Monitoring-Tool entwickelt. Im Einsatz bei <a target="_blank" href="https://www.formulastudent.de/\">Formula Student Germany</a> und <a target=\"_blank\" href=\"https://www.formula-ata.it/\" target=\"_blank\">Formula Student Italy</a>.",
+            "htmlDescription": "Was sieht ein selbstfahrendes Rennauto? Und wie wird aus Kameradaten eine Fahrstrecke? Für <a target=\"_blank\" href=\"https://www.munichmotorsport.de/\" target=\"_blank\">municHMotorsport</a> habe ich ein webbasiertes Monitoring-Tool entwickelt. Im Einsatz bei <a target=\"_blank\" href=\"https://www.formulastudent.de/\">Formula Student Germany</a> und <a target=\"_blank\" href=\"https://www.formula-ata.it/\" target=\"_blank\">Formula Student Italy</a>.",
             "image": {
                 "url": "./assets/driverless-s.jpg",
                 "alt": "Schematische Darstellung eines Rennautos von oben, außenrum bunte Punkte"
