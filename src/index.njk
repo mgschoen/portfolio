@@ -4,16 +4,13 @@
     <meta charset="utf-8">
     <title>{{profile.name}} | {{profile.description}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-
-    <meta property="og:url"                content="http://argonn.me/" />
-    <meta property="og:type"               content="website" />
-    <meta property="og:title"              content="{{profile.name}} | {{profile.description}}" />
-    <meta property="og:description"        content="{{meta.description}}" />
-    <meta property="og:image"              content="{{meta.socialImageUrl}}" />
-
+    <meta property="og:url"         content="http://argonn.me/" />
+    <meta property="og:type"        content="website" />
+    <meta property="og:title"       content="{{profile.name}} | {{profile.description}}" />
+    <meta property="og:description" content="{{meta.description}}" />
+    <meta property="og:image"       content="{{meta.socialImageUrl}}" />
 </head>
 <body>
-
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <div class="media profile">
@@ -40,14 +37,12 @@
         </div>
     </div>
 
-    <div class="container">
-        
+    <div class="container">        
         <div class="row portfolio-header">
             <div class="col-12">
                 <h2>Projekte</h2>
             </div>
         </div>
-
         <div class="row card-row portfolio-card-row">
             {% for project in projects %}
                 <div class="col-sm-6 col-lg-4">
@@ -64,13 +59,11 @@
                 </div>
             {% endfor %}
         </div>
-
         <div class="row portfolio-header">
             <div class="col-12">
                 <h2>Stationen</h2>
             </div>
         </div>
-    
         <!-- Timeline -->
         <div class="row timeline-row">
             <div class="col-12">
@@ -97,7 +90,6 @@
             </div>
         </div>
     </div>
-
     <!-- Footer -->
     <div class="jumbotron jumbotron-fluid jumbotron-footer">
         <div class="container">
