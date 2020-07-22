@@ -11,11 +11,10 @@
     <meta property="og:image"       content="{{meta.socialImageUrl}}" />
 </head>
 <body>
-    <div class="jumbotron jumbotron-fluid">
+    <header class="jumbotron jumbotron-fluid">
         <div class="container">
             <div class="media profile">
-                <img src="{{ profile.imageUrl }}"
-                    class="align-self-center profile-pic">
+                <img src="{{ profile.imageUrl }}" class="align-self-center profile-pic" alt="">
                 <div class="media-body">
                     <h1 class="display-4">{{profile.name}}</h1>
                     <p class="lead">{{profile.tagline}}</p>
@@ -23,11 +22,11 @@
                         {% for socialType, socialEntry in social %}
                             {% if socialType == "mail" %}
                                 <a target="_blank" href="mailto:{{socialEntry.address}}">
-                                    <img src="{{socialEntry.imageUrl}}" class="social-icon">
+                                    <img src="{{socialEntry.imageUrl}}" class="social-icon" alt="">
                                 </a>
                             {% else %}
                                 <a target="_blank" href="{{socialEntry.url}}">
-                                    <img src="{{socialEntry.imageUrl}}" class="social-icon">
+                                    <img src="{{socialEntry.imageUrl}}" class="social-icon" alt="">
                                 </a>
                             {% endif %}
                         {% endfor %}
@@ -35,63 +34,67 @@
                 </div>
             </div>
         </div>
-    </div>
+    </header>
 
-    <div class="container">        
-        <div class="row portfolio-header">
-            <div class="col-12">
-                <h2>Projekte</h2>
+    <main class="container">
+        <section>
+            <div class="row portfolio-header">
+                <div class="col-12">
+                    <h2>Projekte</h2>
+                </div>
             </div>
-        </div>
-        <div class="row card-row portfolio-card-row">
-            {% for project in projects %}
-                <div class="col-sm-6 col-lg-4">
-                    <div class="card" style="width: 100%;">
-                        <img class="card-img-top" src="{{project.image.url}}" alt="{{project.image.alt}}">
-                        <div class="card-body">
-                            <h5 class="card-title">{{project.headline | safe}}</h5>
-                            <p class="card-text">{{project.htmlDescription | safe}}</p>
-                            {% for button in project.buttons %}
-                                <a target="_blank" href="{{button.url}}" class="btn btn-primary">{{button.label}}</a>
+            <div class="row card-row portfolio-card-row">
+                {% for project in projects %}
+                    <section class="col-sm-6 col-lg-4">
+                        <div class="card" style="width: 100%;">
+                            <img class="card-img-top" src="{{project.image.url}}" alt="{{project.image.alt}}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{project.headline | safe}}</h5>
+                                <p class="card-text">{{project.htmlDescription | safe}}</p>
+                                {% for button in project.buttons %}
+                                    <a target="_blank" href="{{button.url}}" class="btn btn-primary">{{button.label}}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </section>
+                {% endfor %}
+            </div>
+        </section>
+        <section>
+            <div class="row portfolio-header">
+                <div class="col-12">
+                    <h2>Stationen</h2>
+                </div>
+            </div>
+            <!-- Timeline -->
+            <div class="row timeline-row">
+                <div class="col-12">
+                    <div class="cd-timeline js-cd-timeline">
+                        <div class="cd-timeline__container">
+                            {% for milestone in milestones %}
+                                {% set imageName = "ios-school-white" %}
+                                {% if milestone.type == "work" %}
+                                    {% set imageName = "ios-build" %}
+                                {% endif %}
+                                <section class="cd-timeline__block {% if milestone.type == 'work' %}cd-timeline__block--right {% endif %}js-cd-block">
+                                    <div class="cd-timeline__img cd-timeline__img--{{milestone.type}} js-cd-img">
+                                        <img src="./assets/{{imageName}}.svg" alt="">
+                                    </div>
+                                    <div class="cd-timeline__content js-cd-content">
+                                        <h4>{{milestone.headline}}</h4>
+                                        <p>{{milestone.description}}</p>
+                                        <span class="cd-timeline__date">{{milestone.date}}</span>
+                                    </div>
+                                </section>    
                             {% endfor %}
                         </div>
                     </div>
                 </div>
-            {% endfor %}
-        </div>
-        <div class="row portfolio-header">
-            <div class="col-12">
-                <h2>Stationen</h2>
             </div>
-        </div>
-        <!-- Timeline -->
-        <div class="row timeline-row">
-            <div class="col-12">
-                <section class="cd-timeline js-cd-timeline">
-                    <div class="cd-timeline__container">
-                        {% for milestone in milestones %}
-                            {% set imageName = "ios-school-white" %}
-                            {% if milestone.type == "work" %}
-                                {% set imageName = "ios-build" %}
-                            {% endif %}
-                            <div class="cd-timeline__block {% if milestone.type == 'work' %}cd-timeline__block--right {% endif %}js-cd-block">
-                                <div class="cd-timeline__img cd-timeline__img--{{milestone.type}} js-cd-img">
-                                    <img src="./assets/{{imageName}}.svg" alt="">
-                                </div>
-                                <div class="cd-timeline__content js-cd-content">
-                                    <h4>{{milestone.headline}}</h4>
-                                    <p>{{milestone.description}}</p>
-                                    <span class="cd-timeline__date">{{milestone.date}}</span>
-                                </div>
-                            </div>    
-                        {% endfor %}
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div>
+        </section>
+    </main>
     <!-- Footer -->
-    <div class="jumbotron jumbotron-fluid jumbotron-footer">
+    <footer class="jumbotron jumbotron-fluid jumbotron-footer">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-sm-6 offset-sm-3 col-lg-4 offset-lg-4 text-center">
@@ -106,6 +109,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </footer>
 </body>
 </html>
