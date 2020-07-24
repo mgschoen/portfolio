@@ -6,6 +6,7 @@
     position: sticky;
     text-align: center;
     top: 0;
+    transition: box-shadow .25s;
     z-index: 1;
 
     @each $breakpoint-name, $container-width in $container-max-widths {
@@ -16,8 +17,17 @@
         }
     }
 
+    &.sticky {
+        box-shadow: 0 2px 10px -5px lightgrey;
+
+        h2 {
+            font-size: 1.25rem;
+        }
+    }
+
     h2 {
         margin-top: .5rem;
+        transition: font-size .25s;
     }
 }
 
