@@ -1,8 +1,24 @@
 div.row.portfolio-header {
+    background: $color-white;
     border-bottom: 1px solid rgba(0,0,0,.125);
     margin-bottom: 20px;
-    margin-top: 40px;
+    margin-top: 2rem;
+    position: sticky;
     text-align: center;
+    top: 0;
+    z-index: 1;
+
+    @each $breakpoint-name, $container-width in $container-max-widths {
+        @media (min-width: map-get($grid-breakpoints, $breakpoint-name)) {
+            $section-width: calc(#{$container-width} - 15px);
+            margin-left: calc(-100vw / 2 + #{$section-width} / 2);
+            margin-right: calc(-100vw / 2 + #{$section-width} / 2);
+        }
+    }
+
+    h2 {
+        margin-top: .5rem;
+    }
 }
 
 .card-row {
