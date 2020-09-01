@@ -1,13 +1,16 @@
+$animation-duration: .25s;
+
 .portfolio-header {
     background: $color-white;
     border-bottom: 1px solid rgba(0,0,0,.125);
     box-shadow: 0 -1px 1px 0 $color-white;
     margin-bottom: 20px;
     margin-top: 2rem;
+    padding-top: 1px;
     position: sticky;
     text-align: center;
-    top: 0;
-    transition: box-shadow .25s;
+    top: -1px;
+    transition: box-shadow $animation-duration;
     z-index: 1;
 
     @each $breakpoint-name, $container-width in $container-max-widths {
@@ -28,7 +31,7 @@
 
     h2 {
         margin-top: .5rem;
-        transition: font-size .25s;
+        transition: font-size $animation-duration;
     }
 }
 

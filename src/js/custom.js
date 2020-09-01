@@ -1,5 +1,7 @@
 function portfolioHeaderIntersectionCallback(entries) {
-    console.log(entries);
+    entries.forEach((entry) => {
+        entry.target.classList.toggle('sticky', entry.boundingClientRect.y < 0);
+    });
 }
 
 function attachIntersectionObservers() {
@@ -8,7 +10,7 @@ function attachIntersectionObservers() {
     }
 
     const observer = new IntersectionObserver(portfolioHeaderIntersectionCallback, {
-        rootMargin: '60px 0px 0px 0px'
+        rootMargin: '-56px 0px 0px 0px'
     });
     const portfolioHeaders = document.querySelectorAll('.portfolio-header');
     portfolioHeaders.forEach(headerElement => {
