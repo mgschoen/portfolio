@@ -13,6 +13,9 @@
     "deploy": "node ./scripts/deploy.js"
   },
   "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
@@ -27,7 +30,7 @@
     "style-loader": "^0.21.0",
     "superagent": "^5.3.1",
     "uglifyjs-webpack-plugin": "^1.2.7",
-    "webpack": "^4.13.0",
+    "webpack": "^4.44.2",
     "webpack-cli": "^3.0.8",
     "webpack-dev-server": "^3.1.11"
   },

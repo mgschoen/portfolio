@@ -51,20 +51,32 @@ module.exports = {
     module: {
         rules: [
 
+            // JS transpilation
+            {
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
+            },
+
             // CSS/SCSS processing
             {
                 test: /\.css$/,
-                use: [ 
-                    MiniCssExtractPlugin.loader, 
-                    'css-loader' 
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader'
                 ]
             },
             {
                 test: /\.scss$/,
-                use: [ 
-                    MiniCssExtractPlugin.loader, 
+                use: [
+                    MiniCssExtractPlugin.loader,
                     'css-loader',
-                    'sass-loader' 
+                    'sass-loader'
                 ]
             },
 
