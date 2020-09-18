@@ -104,6 +104,9 @@ $animation-duration: .25s;
     position: absolute;
     top: 0;
     width: 100%;
-    left: 0;
+    right: 0;
     height: 100%;
+    @media (min-width: 1024px) {
+        width: 60%;
+    }
 }
