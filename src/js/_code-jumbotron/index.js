@@ -52,7 +52,6 @@ export default class CodeJumbotron {
             this.canvas.offsetWidth === this.width &&
             this.canvas.offsetHeight === this.height
         ) {
-            console.log('nuffin to do');
             this.canvas.setAttribute('width', previousWidth);
             this.canvas.setAttribute('height', previousHeight);
             this.canvas.setAttribute('style', previousStyle);
