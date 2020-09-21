@@ -33,7 +33,36 @@ export default class CodeJumbotron {
         });
         this.scene.add(this.slide.mesh);
 
+        this.boundOnWindowResize = () => this.onWindowResize();
+        this.boundAnimate = () => this.animate();
+
+        window.addEventListener('resize', this.boundOnWindowResize);
+
         this.animate();
+    }
+
+    onWindowResize() {
+        const previousWidth = this.canvas.getAttribute('width');
+        const previousHeight = this.canvas.getAttribute('height');
+        const previousStyle = this.canvas.getAttribute('style');
+        this.canvas.removeAttribute('width');
+        this.canvas.removeAttribute('height');
+        this.canvas.removeAttribute('style');
+        if (
+            this.canvas.offsetWidth === this.width &&
+            this.canvas.offsetHeight === this.height
+        ) {
+            console.log('nuffin to do');
+            this.canvas.setAttribute('width', previousWidth);
+            this.canvas.setAttribute('height', previousHeight);
+            this.canvas.setAttribute('style', previousStyle);
+            return;
+        }
+        this.width = this.canvas.offsetWidth;
+        this.height = this.canvas.offsetHeight;
+        this.camera.aspect = this.aspect;
+        this.camera.updateProjectionMatrix();
+        this.renderer.setSize(this.width, this.height);
     }
 
     animate() {
@@ -45,7 +74,7 @@ export default class CodeJumbotron {
         }
         this.camera.position.y += this.direction;
         this.renderer.render(this.scene, this.camera);
-        window.requestAnimationFrame(this.animate.bind(this));
+        window.requestAnimationFrame(this.boundAnimate);
     }
 
     get aspect() {
