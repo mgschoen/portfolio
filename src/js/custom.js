@@ -1,5 +1,7 @@
 import initStickyHeaders from './_sticky-headers';
-import initCodeJumbotron from './_code-jumbotron';
+import CodeJumbotron from './_code-jumbotron/';
 
 initStickyHeaders();
-initCodeJumbotron();
+window.argonn = {
+    jumbotron: new CodeJumbotron()
+};
