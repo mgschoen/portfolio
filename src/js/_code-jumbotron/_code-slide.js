@@ -41,18 +41,19 @@ export default class CodeSlide {
             Math.floor(Math.random() * (lines.length - snippetLength)) :
             0;
         this.codeContent = lines.slice(startIndex, startIndex + snippetLength);
-        const lineHeight = 20;
-        this.ctx.fillStyle = 'black';
-        this.ctx.font = '16px monospace';
+        const lineHeight = 14;
+        this.ctx.fillStyle = this.config.color;
+        this.ctx.font = '10px monospace';
         this.codeContent.forEach((line, index) => {
-            this.ctx.fillText(line, 20, 20 + (index * lineHeight));
+            this.ctx.fillText(line, lineHeight, lineHeight + (index * lineHeight));
         });
     }
 
     initMesh() {
         this.texture = new CanvasTexture(this.canvas);
         this.geometry = new PlaneGeometry(500, 500);
-        this.geometry.rotateX((Math.random() * 0.5) - 0.25);
+        const maxRotation = 0.25
+        this.geometry.rotateX((Math.random() * maxRotation) - maxRotation / 2);
         this.material = new MeshBasicMaterial({ map: this.texture });
         this.mesh = new Mesh(this.geometry, this.material);
     }

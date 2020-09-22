@@ -21,13 +21,14 @@ export default class CodeJumbotron {
         this.scene = new Scene();
         this.scene.background = new Color(this.backgroundColor);
         this.camera = new PerspectiveCamera(75, this.aspect, 0.1, 1000);
-        this.camera.position.set(0, -80, 200);
+        this.camera.position.set(0, -80, 140);
         this.renderer = new WebGLRenderer({ canvas: this.canvas });
         this.renderer.setSize(this.width, this.height);
 
         // init slide
         this.slide = new CodeSlide({
             background: this.backgroundColor,
+            color: 'rgb(206,206,206)',
             width: this.width,
             height: this.height
         });
@@ -66,12 +67,12 @@ export default class CodeJumbotron {
 
     animate() {
         if (
-            this.direction > 0 && this.camera.position.y === 80 ||
-            this.direction < 0 && this.camera.position.y === -80
+            this.direction > 0 && this.camera.position.y >= 80 ||
+            this.direction < 0 && this.camera.position.y <= -80
         ) {
             this.direction *= -1;
         }
-        this.camera.position.y += this.direction;
+        this.camera.position.y += (this.direction * 0.2);
         this.renderer.render(this.scene, this.camera);
         window.requestAnimationFrame(this.boundAnimate);
     }
