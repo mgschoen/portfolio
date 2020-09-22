@@ -93,13 +93,6 @@ $animation-duration: .25s;
     }
 }
 
-@include media-breakpoint-down(xs) {
-    .media.profile {
-        display: block;
-        text-align: center;
-    }
-}
-
 #code-jumbotron {
     position: absolute;
     top: 0;
@@ -108,5 +101,27 @@ $animation-duration: .25s;
     height: 100%;
     @media (min-width: 1024px) {
         width: 60%;
+    }
+}
+
+.code-hint {
+    bottom: .7rem;
+    position: absolute;
+    right: .7rem;
+    p {
+        color: $color-darkgrey;
+        font-size: .7rem;
+        margin: 0;
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .media.profile {
+        display: block;
+        text-align: center;
+    }
+    .code-hint {
+        left: .7rem;
+        text-align: center;
     }
 }
