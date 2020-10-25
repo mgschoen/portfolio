@@ -12,10 +12,14 @@ export default class CodeJumbotron {
     constructor() {
         // define general properties
         this.backgroundColor = 'rgb(233, 236, 239)';
-        this.canvas = document.getElementById('code-jumbotron');
+        this.canvas = document.getElementById('code-canvas');
         this.width = this.canvas.offsetWidth;
         this.height = this.canvas.offsetHeight;
         this.direction = .5;
+
+        // dom state
+        this._state = 'STATE_LOADING';
+        this.credit = document.getElementById('code-credit');
 
         // init scene
         this.scene = new Scene();
@@ -112,5 +116,25 @@ export default class CodeJumbotron {
         }
         this._dimensions.height = value;
         this._dimensions.aspect = this._dimensions.width / this._dimensions.height;
+    }
+
+    get state() {
+        return this._state;
+    }
+
+    set state(value) {
+        switch (value) {
+            case 'STATE_LOADING':
+                this._state = value;
+                this.canvas.classList.toggle('invisible', true);
+                this.credit.classList.toggle('invisible', true);
+                break;
+            case 'STATE_DEFAULT':
+                this._state = value;
+                this.canvas.classList.toggle('invisible', false);
+                this.credit.classList.toggle('invisible', false);
+                break;
+            default:
+        }
     }
 };

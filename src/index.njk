@@ -12,7 +12,14 @@
 </head>
 <body>
     <header class="jumbotron jumbotron-fluid jumbotron-header">
-        <canvas id="code-jumbotron"></canvas>
+        <div class="code-jumbotron d-flex">
+            <div class="d-flex justify-content-center">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            <canvas id="code-canvas" class="invisible"></canvas>
+        </div>
         <div class="container">
             <div class="media profile">
                 <img src="{{ profile.imageUrl }}" class="align-self-center profile-pic" alt="">
@@ -35,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <aside class="code-hint">
+        <aside id="code-credit" class="invisible">
             <p><a href="#" target="_blank" alt="Go to repository">mgschoen/repo-name</a></p>
         </aside>
     </header>
